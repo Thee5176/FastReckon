@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Journal Table
+{% endblock %}
+
+{% block content %}
+  <p>{{ check }}</p>
+  <div class="table-responsive">
+    <table class="table table-primary">
+      <thead>
+        <tr>
+          <th scope="col">Book_id</th>
+          <th scope="col">Transaction_id</th>
+          <th scope="col">Date</th>
+          <th scope="col">Description</th>
+          <th scope="col">Accounting_id</th>
+          <th scope="col">Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for record in journal_records %}
+          {% for line_item in journal_records.lineitems.all %}
+            <tr class="">
+              <td scope="row">{{ record.book_id }}-{{ record.transaction_id }}</td>
+              <td scope="row">{{ record.date|date }}</td>
+              <td scope="row">{{ record.description }}</td>
+              <td scope="row">{{ line_item.account_id }}</td>
+              <td scope="row">{{ line_item.dr_amount }}</td>
+              <td scope="row">{{ line_item.cr_amount }}</td>
+              <td scope="row">{{ line_item.amount }}</td>
+            </tr>
+          {% endfor %}
+        {% empty %}
+          <tr>
+            <td colspan="5">No transactions available.</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

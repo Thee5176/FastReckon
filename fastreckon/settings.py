@@ -9,8 +9,11 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-
 from pathlib import Path
+from environs import Env
+
+env = Env()
+env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-9h5l#gqf-(ls8xt^l)hbn4vh%2xt5l74k!*n2+^%6x+-g!tx&2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.bool('DJANGO_DEBUG')
 
-ALLOWED_HOSTS = [".herokuapp.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -40,9 +43,13 @@ INSTALLED_APPS = [
     # 3rd Party
     'crispy_forms',
     'crispy_bootstrap5',
+    'debug_toolbar',
     'whitenoise.runserver_nostatic',
+    'allauth',
+    'allauth.account',
     # Local
     'accounts.apps.AccountsConfig',
+    'pages.apps.PagesConfig',
 ]
 
 MIDDLEWARE = [
@@ -51,8 +58,11 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #allauth middleware
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'fastreckon.urls'
@@ -80,10 +90,8 @@ WSGI_APPLICATION = 'fastreckon.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': env.dj_db_url('DATABASE_URL',
+    default = 'postgres://postgres@db/postgres')
 }
 
 
@@ -131,11 +139,22 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressManifestStaticFilesStorage' #B
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Authentication Setup
-
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home'
+# User Model
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
+# Bootstrap5
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrapa5'
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+# django-allauth Minimum Setup
+SITE_ID = 1
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+LOGIN_REDIRECT_URL = 'home'
+ACCOUNT_LOGOUT_REDIRECT = 'home'
+
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
