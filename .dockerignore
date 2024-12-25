@@ -42,4 +42,4 @@ docs
 stats
 
 # Ignore Dockerfile (if not needed in the image)
-Dockerfile
+Dockerfilec
