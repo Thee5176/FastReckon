@@ -1,0 +1,17 @@
+.logo {
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 700;
+    font-style: normal;
+    padding: 0px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+* {
+    font-family: "Inconsolata", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
