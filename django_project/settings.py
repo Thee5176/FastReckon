@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 from environs import Env
+import os
 
 env = Env()
 env.read_env()
@@ -24,10 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('DJANGO_SECRET_KEY')
+SECRET_KEY = env.str('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool('DJANGO_DEBUG')
+DEBUG = env.bool('DJANGO_DEBUG', default=False)
 
 ALLOWED_HOSTS = []
 
@@ -47,18 +48,18 @@ INSTALLED_APPS = [
     # django-allauth
     'allauth',
     'allauth.account',
-    # django-allauth-social
     'allauth.socialaccount',
-    'allauth.socialaccount.providers.apple',
-    'allauth.socialaccount.providers.facebook',
-    'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.line',
+    # 'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.github',
+    # 'allauth.socialaccount.providers.google',
+    # 'allauth.socialaccount.providers.line',
     # Boostrap5
     'crispy_forms',
     'crispy_bootstrap5',
     # Local
     'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
+    'records.apps.RecordsConfig',
 ]
 
 MIDDLEWARE = [
@@ -168,9 +169,40 @@ ACCOUNT_UNIQUEUSERNAME = True
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 
-SITE_ID = 1
 AUTHENTICATION_BACKEND = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
+
+SITE_ID = 1
+
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# allauth socialaccount
+
+SOCIALACCOUNT_PROVIDERS = {
+    "facebook": {
+        "APP": {
+            "client_id": os.getenv("SOCIALACCOUNT_FACEBOOK_CLIENT_ID"),
+            "secret": os.getenv("SOCIALACCOUNT_FACEBOOK_SECRET"),
+        }
+    },
+    "github": {
+        "APP": {
+            "client_id": os.getenv("SOCIALACCOUNT_GITHUB_CLIENT_ID"),
+            "secret": os.getenv("SOCIALACCOUNT_GITHUB_SECRET"),
+        }
+    },
+    # "google": {
+    #     "APP": {
+    #         "client_id": os.getenv("SOCIALACCOUNT_GOOGLE_CLIENT_ID"),
+    #         "secret": os.getenv("SOCIALACCOUNT_GOOGLE_SECRET"),
+    #     }
+    # },
+    # "line": {
+    #     "APP": {
+    #         "client_id": os.getenv("SOCIALACCOUNT_LINE_CLIENT_ID"),
+    #         "secret": os.getenv("SOCIALACCOUNT_LINE_SECRET"),
+    #     }
+    # },
+}

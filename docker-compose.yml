@@ -10,13 +10,13 @@ services:
     depends_on:
       - db
     environment:
-      - "DJANGO_SECRET_KEY=django-insecure-qc!fo@@()532j!9(5=f9da895#_#zcbq)&@p%k%4rdtd(g%b3_"
-      - "DJANGO_DEBUG=True"
+      - DJANGO_SECRET_KEY=django-insecure-qc!fo@@()532j!9(5=f9da895#_#zcbq)&@p%k%4rdtd(g%b3_
+      - DJANGO_DEBUG=True
   db:
     image: postgres:13
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
-      - "POSTGRES_HOST_AUTH_METHOD=trust"
+      - POSTGRES_HOST_AUTH_METHOD=trust
 volumes:
   postgres_data:

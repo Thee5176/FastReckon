@@ -1,13 +1,23 @@
 {% extends "_base.html" %}
+{% load socialaccount %}
 {% load crispy_forms_tags %}
+
+{% load static %}
 {% block title %}User Login{% endblock title %}
 
 {% block content %}
-<h2 class="my-3">Log In</h2>
-<form method="post" class="form-control">
+<h2 class="my-3">Login to FastReckon</h2>
+<form method="post" class="form-control p-3">
     {% csrf_token %}
     {{ form | crispy }}
-    <input class="btn btn-primary" type="submit" value="Login">
+    <div class="text-start">
+        <input class="btn btn-primary" type="submit" value="Login">
+        <span class="mx-2">or</span>
+        <a href="{% provider_login_url "github" %}" class="btn btn-dark ">
+            <img src="{% static "images/github.svg" %}">
+            Login via GitHub
+        </a>
+    </div>
 </form>
 
 {% endblock content %}

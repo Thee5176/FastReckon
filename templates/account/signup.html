@@ -4,7 +4,7 @@
 
 {% block content %}
 <h2 class="my-3">Sign Up</h2>
-<form method="post" class="form-control">
+<form method="post" class="form-control p-3">
     {% csrf_token %}
     {{ form | crispy }}
     <input class="btn btn-primary" type="submit" value="Sign up">
