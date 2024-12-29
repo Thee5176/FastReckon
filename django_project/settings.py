@@ -59,7 +59,6 @@ INSTALLED_APPS = [
     # Local
     'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
-    'records.apps.RecordsConfig',
 ]
 
 MIDDLEWARE = [
@@ -101,8 +100,10 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': env.dj_db_url('DATABASE_URL',
-    default='postgres://postgres@db/postgres')
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 
@@ -181,12 +182,12 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # allauth socialaccount
 
 SOCIALACCOUNT_PROVIDERS = {
-    "facebook": {
-        "APP": {
-            "client_id": os.getenv("SOCIALACCOUNT_FACEBOOK_CLIENT_ID"),
-            "secret": os.getenv("SOCIALACCOUNT_FACEBOOK_SECRET"),
-        }
-    },
+    # "facebook": {
+    #     "APP": {
+    #         "client_id": os.getenv("SOCIALACCOUNT_FACEBOOK_CLIENT_ID"),
+    #         "secret": os.getenv("SOCIALACCOUNT_FACEBOOK_SECRET"),
+    #     }
+    # },
     "github": {
         "APP": {
             "client_id": os.getenv("SOCIALACCOUNT_GITHUB_CLIENT_ID"),
