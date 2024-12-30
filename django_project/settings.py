@@ -64,6 +64,7 @@ INSTALLED_APPS = [
     'acc_codes.apps.AccCodesConfig',
     'pages.apps.PagesConfig',
     'journals.apps.JournalsConfig',
+    'mealpreps.apps.MealprepsConfig',
 ]
 
 MIDDLEWARE = [
