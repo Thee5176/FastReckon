@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     # Local
     'accounts.apps.AccountsConfig',
+    'acc_codes.apps.AccCodesConfig',
     'pages.apps.PagesConfig',
     'journals.apps.JournalsConfig',
 ]
@@ -165,6 +166,7 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 
 LOGIN_REDIRECT_URL = 'home'
 ACCOUNT_LOGOUT_REDIRECT = 'home'
+
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_USERNAME_REQUIRED = True
 ACCOUNT_UNIQUEUSERNAME = True

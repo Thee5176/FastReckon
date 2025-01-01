@@ -1,0 +1,56 @@
+{% extends "_base.html" %}
+
+{% block title %}Account List{% endblock title %}
+
+{% block content %}
+    <div class="row justify-content-between">
+        <h2 class="col-8 text-muted">Table of Account</h2>
+        <a class="btn btn-success col-4" href="{% url "account_create" %}">+ New Account</a>
+    </div>
+    <hr>
+    <div
+        class="table-responsive-md"
+    >
+        <table
+            class="table table-striped-columns table-hover table-light align-middle"
+        >
+            <thead class="table-light">
+                <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Record Count</th>
+                    <th>Last Transaction</th>
+                </tr>
+            </thead>
+            {% for account in account_list %}
+            <tbody class="table-group-divider">
+                <tr
+                    class="table-light"
+                >
+                    <td scope="row">
+                        <a href="{{ account.get_absolute_url }}">
+                            {{ account.code }}
+                        </a>
+                    </td>
+                    <td>{{ account.name }}</td>
+                    <td>#</td>
+                    <td>#</td>
+                </tr>
+            </tbody>
+            {% empty %}
+            <tbody class="table-group-divider">
+                <tr
+                    class="table-light"
+                >
+                    <td scope="row">-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+            <p class='text-danger'>No Account in record</p>
+            {% endfor %}
+        </table>
+    </div>
+    
+{% endblock content %}

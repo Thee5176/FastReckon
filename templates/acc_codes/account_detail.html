@@ -1,0 +1,32 @@
+{% extends "_base.html" %}
+
+{% block title %}Account Detail{% endblock title %}
+
+{% block content %}
+    <div class="row justify-content-between">
+        <h2 class="col-6 text-muted">Account Info</h2>
+        <a class="btn btn-warning col-3" href="{% url "account_list" %}">Back to list</a>
+    </div>
+    <hr>
+    {% if object %}
+    <div class="container my-4">
+        <h4>{{ object.code }} &middot; {{ object.name }}</h4>
+        <fieldset class="border p-3">
+            <legend>Account Detail:</legend>
+            <ul>
+                <li>Code of Account: {{ object. }}</li>
+                <li>Account Type: </li>
+                <li>Transaction Count: </li>
+                <li>Last Recorded: </li>
+            </ul>
+        </fieldset>
+        <div class="container row justify-content-between">
+            <a class="btn btn-primary col-4" href="{% url "account_update" object.id %}">! Update Account</a>
+            <a class="btn btn-danger col-4" href="{% url "account_delete" object.id %}">- Delete Account</a>
+        </div>
+        
+    </div>
+    {% else %}
+    <p>No Object Found</p>
+    {% endif %}
+{% endblock %}

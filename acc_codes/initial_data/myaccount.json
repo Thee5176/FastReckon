@@ -1,0 +1,530 @@
+[
+    {
+        "model": "acc_codes.account",
+        "pk": 1,
+        "fields": {
+            "name": "Pretty Cash",
+            "super_account": 1,
+            "sub_account": "50",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 2,
+        "fields": {
+            "name": "Cash in hand",
+            "super_account": 1,
+            "sub_account": "01",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 3,
+        "fields": {
+            "name": "KBank 0333 (J-checking)",
+            "super_account": 2,
+            "sub_account": "01",
+            "detailed_account": "01",
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 4,
+        "fields": {
+            "name": "KBank 2911 (T-checking)",
+            "super_account": 2,
+            "sub_account": "01",
+            "detailed_account": "02",
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 5,
+        "fields": {
+            "name": "KBank 8119 (Room 723)",
+            "super_account": 2,
+            "sub_account": "01",
+            "detailed_account": "03",
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 6,
+        "fields": {
+            "name": "Suica IC",
+            "super_account": 3,
+            "sub_account": "01",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 7,
+        "fields": {
+            "name": "FamiPay",
+            "super_account": 3,
+            "sub_account": "02",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 8,
+        "fields": {
+            "name": "PayPay",
+            "super_account": 3,
+            "sub_account": "03",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 9,
+        "fields": {
+            "name": "YouTrip",
+            "super_account": 4,
+            "sub_account": "01",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 10,
+        "fields": {
+            "name": "Boarding Card",
+            "super_account": 4,
+            "sub_account": "02",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 11,
+        "fields": {
+            "name": "Dad AR",
+            "super_account": 5,
+            "sub_account": "01",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 12,
+        "fields": {
+            "name": "SuperHotel AW",
+            "super_account": 10,
+            "sub_account": "01",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 13,
+        "fields": {
+            "name": "En AW",
+            "super_account": 10,
+            "sub_account": "02",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 14,
+        "fields": {
+            "name": "Katsuya AW",
+            "super_account": 10,
+            "sub_account": "03",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 15,
+        "fields": {
+            "name": "SuperHotel Wagee",
+            "super_account": 19,
+            "sub_account": "01",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 16,
+        "fields": {
+            "name": "En Wage",
+            "super_account": 19,
+            "sub_account": "02",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 17,
+        "fields": {
+            "name": "Katsuya Wage",
+            "super_account": 19,
+            "sub_account": "03",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 18,
+        "fields": {
+            "name": "ゆうちょ 1861",
+            "super_account": 2,
+            "sub_account": "04",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 19,
+        "fields": {
+            "name": "KBank Deposit Interest",
+            "super_account": 21,
+            "sub_account": "01",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 20,
+        "fields": {
+            "name": "ゆうちょ Deposit Interest",
+            "super_account": 21,
+            "sub_account": "02",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 21,
+        "fields": {
+            "name": "MerPay",
+            "super_account": 3,
+            "sub_account": "04",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 22,
+        "fields": {
+            "name": "MerCard",
+            "super_account": 11,
+            "sub_account": "01",
+            "detailed_account": null,
+            "guideline": "Limit Amount : 10,000 円",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 23,
+        "fields": {
+            "name": "JASSO Scholarship",
+            "super_account": 24,
+            "sub_account": "01",
+            "detailed_account": null,
+            "guideline": "Duraion: 1 year (2024/4-2025/3)",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 24,
+        "fields": {
+            "name": "Allowance from Dad",
+            "super_account": 25,
+            "sub_account": "01",
+            "detailed_account": null,
+            "guideline": "Monthly Amount: 40,000 円",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 25,
+        "fields": {
+            "name": "Allowance from Mom",
+            "super_account": 25,
+            "sub_account": "02",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 26,
+        "fields": {
+            "name": "MealPrep",
+            "super_account": 31,
+            "sub_account": "01",
+            "detailed_account": null,
+            "guideline": "Main Ingredient:\r\n- Veg\r\nCabbage\r\nGreen Cabbage\r\nCarrot\r\nPumpkin\r\nPotato\r\nBean Sprout\r\n\r\n- Cond\r\nOnion\r\nGarlic\r\nChilly\r\n\r\n- Protein\r\nTofu\r\nNutto\r\nEgg\r\nMushroom\r\n\r\n- Carb\r\nBread\r\nUdon\r\nRice",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 27,
+        "fields": {
+            "name": "Eat-out",
+            "super_account": 31,
+            "sub_account": "03",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 28,
+        "fields": {
+            "name": "Snack",
+            "super_account": 31,
+            "sub_account": "02",
+            "detailed_account": null,
+            "guideline": "Milk\r\nSoy Milk\r\nPeanut\r\nBakery",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 29,
+        "fields": {
+            "name": "Commuter Pass",
+            "super_account": 32,
+            "sub_account": "01",
+            "detailed_account": null,
+            "guideline": "埼京線：十条駅→池袋駅\r\n１ヵ月:　 2,710　¥\r\n３ヵ月:　 7,730　¥\r\n６ヵ月:　14,650　¥",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 30,
+        "fields": {
+            "name": "Kbank The Passion VISA",
+            "super_account": 11,
+            "sub_account": "02",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 31,
+        "fields": {
+            "name": "SCB JCB Platinum",
+            "super_account": 11,
+            "sub_account": "03",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 32,
+        "fields": {
+            "name": "Mom AP",
+            "super_account": 12,
+            "sub_account": "01",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 33,
+        "fields": {
+            "name": "Clothing",
+            "super_account": 33,
+            "sub_account": "03",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 34,
+        "fields": {
+            "name": "Non-Commuter Pass",
+            "super_account": 32,
+            "sub_account": "02",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 35,
+        "fields": {
+            "name": "Appliances and Gadgets",
+            "super_account": 33,
+            "sub_account": "02",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 36,
+        "fields": {
+            "name": "STEP CLOUD Utilities",
+            "super_account": 34,
+            "sub_account": "01",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 37,
+        "fields": {
+            "name": "National Health Insurance",
+            "super_account": 35,
+            "sub_account": "01",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 38,
+        "fields": {
+            "name": "Medical Bills",
+            "super_account": 35,
+            "sub_account": "02",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 39,
+        "fields": {
+            "name": "Glocery",
+            "super_account": 33,
+            "sub_account": "01",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 40,
+        "fields": {
+            "name": "TIU Tuition Fee",
+            "super_account": 36,
+            "sub_account": "01",
+            "detailed_account": null,
+            "guideline": "2024/4  : 410,000\r\n2024/10 : 410,000\r\n2025/4  : 460,000\r\n2025/10 : 460,000\r\n2026/4  : 460,000\r\n2026/10 : 460,000",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 41,
+        "fields": {
+            "name": "Meal Treat",
+            "super_account": 37,
+            "sub_account": "01",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 42,
+        "fields": {
+            "name": "Other Expenses",
+            "super_account": 39,
+            "sub_account": "00",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 43,
+        "fields": {
+            "name": "STEP CLOUD Rent",
+            "super_account": 46,
+            "sub_account": "01",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 44,
+        "fields": {
+            "name": "Services Fee",
+            "super_account": 39,
+            "sub_account": "01",
+            "detailed_account": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    }
+]
