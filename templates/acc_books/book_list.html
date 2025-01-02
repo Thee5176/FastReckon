@@ -1,0 +1,53 @@
+{% extends "_base.html" %}
+
+{% block title %}Account List{% endblock title %}
+
+{% block content %}
+    <div class="row justify-content-between">
+        <h2 class="col-8 text-muted">Book of Account</h2>
+        <a class="btn btn-success col-4" href="{% url "book_create" %}">+ New Book</a>
+    </div>
+    <hr>
+    <div
+        class="table-responsive-md"
+    >
+        <table
+            class="table table-striped-columns table-hover table-light align-middle"
+        >
+            <thead class="table-light">
+                <tr>
+                    <th>Abbreviation</th>
+                    <th>Name</th>
+                    <th>Guideline</th>
+                </tr>
+            </thead>
+            {% for book in book_list %}
+            <tbody class="table-group-divider">
+                <tr
+                    class="table-light position-relative"
+                >
+                    <td scope="row">
+                        <a href="{% url "book_update" book.pk %}" class="stretched-link text-decoration-none text-dark">
+                            {{ book.abbr }}
+                        </a>
+                    </td>
+                    <td>{{ book.name }}</td>
+                    <td>{{ book.guideline }}</td>
+                </tr>
+            </tbody>
+            {% empty %}
+            <tbody class="table-group-divider">
+                <tr
+                    class="table-light"
+                >
+                    <td scope="row">-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+            <p class='text-danger'>No Book Found</p>
+            {% endfor %}
+        </table>
+    </div>
+    
+{% endblock content %}

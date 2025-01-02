@@ -1,0 +1,19 @@
+{% extends "_base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}{{ view_name }} Book{% endblock title %}
+
+{% block content %}
+<h2 class="my-3">{{ view_name }} Book</h2>
+<form method="post" class="form-control p-3">
+    {% csrf_token %}
+    {{ form | crispy }}
+    <div class="container d-flex justify-content-begin">
+        <input class="btn btn-primary" type="submit" value="{{ view_name }}">
+        <a class="btn btn-warning ms-auto" href="{% url "book_list" %}">Back to List</a>
+        {% if view_name == "Update" %}
+        <a class="btn btn-danger ms-auto" href="{% url "book_delete" object.id %}">- Delete Book</a>
+        {% endif %}
+    </div>
+</form>
+
+{% endblock content %}
