@@ -14,10 +14,26 @@
         <fieldset class="border p-3">
             <legend>Account Detail:</legend>
             <ul>
-                <li>Code of Account: {{ object. }}</li>
-                <li>Account Type: </li>
-                <li>Transaction Count: </li>
-                <li>Last Recorded: </li>
+                <li class="d-flex align-items-start">
+                    <span class="col-3">Chart of Account: </span>
+                    
+                    <span class="badge bg-{{ object.color_code }}">
+                        {% for coa in chart_of_account %}{{ coa }}{% endfor %}
+                    </span>
+                    
+                </li>
+                <li class="d-flex align-items-start">
+                    <span class="col-3">Account Type: </span>
+                    {% for type in account_type %}
+                    <span class="badge bg-secondary">{{ type }}</span>
+                    {% endfor %}
+                </li>
+                <li class="d-flex align-items-start">
+                    <span class="col-3">Group of Account: </span>
+                    <span class="badge bg-secondary">{{ object.super_account }}</span>
+                </li>
+                <li class="d-flex align-items-start"><span class="col-4">Transaction Count: </span></li>
+                <li class="d-flex align-items-start"><span class="col-4">Last Recorded: </span></li>
             </ul>
         </fieldset>
         <div class="container row justify-content-between">

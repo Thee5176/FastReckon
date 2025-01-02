@@ -1,13 +1,9 @@
 {% extends "_base.html" %}
 {% load crispy_forms_tags %}
-{% block title %}Create/Update Account{% endblock title %}
+{% block title %}{{ view_name }} Account{% endblock title %}
 
 {% block content %}
-{% if view_name == "CREATE" %}
-<h2 class="my-3">Create Account</h2>
-{% elif view_name == "UPDATE" %}
-<h2 class="my-3">Update Account</h2>
-{% endif %}
+<h2 class="my-3">{{ view_name }} Account</h2>
 <form method="post" class="form-control p-3">
     {% csrf_token %}
     {{ form | crispy }}

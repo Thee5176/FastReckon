@@ -25,11 +25,8 @@ class AccountLevel1(models.Model):
     def __str__(self):
         return f"{self.code} | {self.name}"
 
-    def get_absolute_url(self):
-        return reverse("AccountLevel1_detail", kwargs={"pk": self.pk})
-
 class AccountLevel2(models.Model):
-    ACCOUNT_CATAGORIES = [
+    ACCOUNT_TYPES = [
         ("11","Current Asset"),
         ("12","Fixed Asset"),
         ("21","Current Liability"),
@@ -43,7 +40,7 @@ class AccountLevel2(models.Model):
         ("52","Corporate Expense"),
     ]
 
-    code = models.CharField(max_length=2, choices=ACCOUNT_CATAGORIES, unique=True)
+    code = models.CharField(max_length=2, choices=ACCOUNT_TYPES, unique=True)
     name = models.CharField(max_length=50)
     guideline = models.TextField(null=True, blank=True)
     level1 = models.ForeignKey(AccountLevel1, related_name="level2_account", on_delete=models.CASCADE)
