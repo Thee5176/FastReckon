@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     # Local
     'accounts.apps.AccountsConfig',
+    'acc_books.apps.AccBooksConfig',
     'acc_codes.apps.AccCodesConfig',
     'pages.apps.PagesConfig',
     'journals.apps.JournalsConfig',

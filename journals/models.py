@@ -1,7 +1,7 @@
 from django.db import models
-from .accounts import AccountLevel3
-from .books import Book
-from .accounts import Account
+from django.conf import settings
+from acc_codes.models import Account, AccountLevel3
+from acc_books.models import Book
     
 class Transaction(models.Model):
     book = models.ForeignKey(
@@ -11,8 +11,9 @@ class Transaction(models.Model):
     )
     description = models.TextField()
     date = models.DateField()
-    ref = models.CharField(max_length=6)
+    intra_date_ref = models.CharField(max_length=3, null=True, blank=True)
     #Meta
+    recorder = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
@@ -30,6 +31,9 @@ class Transaction(models.Model):
     
     def auto_ref(self):
         self.ref = self.ask_for_ref
+    
+    def get_absolute_url(self):
+        return reverse("transaction_detail", kwargs={"pk": self.pk})
     
     def __str__(self):
         return f"{self.book_id}{self.id}"

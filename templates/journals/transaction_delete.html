@@ -1,0 +1,19 @@
+{% extends "_base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}Delete Transaction{% endblock title %}
+
+{% block content %}
+<h2 class="my-3 text-muted">Delete Transaction</h2>
+<hr>
+<div class=>
+    <form method="post" class="form-control p-3 col-6">
+        {% csrf_token %}
+        <p>Are you sure you want to delete transaction {{ object. }} ?</p>
+        <div class="container d-flex justify-content-begin">
+            <input class="btn btn-danger" type="submit" value="Delete">
+            <a class="btn btn-warning ms-auto" href="{% url "transaction_update" object.id %}">Back</a>
+        </div>
+    </form>
+</div>
+
+{% endblock content %}

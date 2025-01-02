@@ -1,6 +1,5 @@
 from django.contrib import admin
-from journals.models.main import Transaction, Entry
-from journals.models.accounts import AccountLevel1, AccountLevel2, AccountLevel3, Account
+from .models import Transaction, Entry
 
 class EntryInline(admin.StackedInline):
     model = Entry
@@ -17,8 +16,3 @@ class TransactionAdmin(admin.ModelAdmin):
     )
     
     inlines=[EntryInline]
-    
-admin.site.register(Account)
-admin.site.register(AccountLevel1)
-admin.site.register(AccountLevel2)
-admin.site.register(AccountLevel3)
