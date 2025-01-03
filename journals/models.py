@@ -1,5 +1,7 @@
-from django.db import models
 from django.conf import settings
+from django.db import models
+from django.urls import reverse
+
 from acc_codes.models import Account, AccountLevel3
 from acc_books.models import Book
     
@@ -12,6 +14,7 @@ class Transaction(models.Model):
     description = models.TextField()
     date = models.DateField()
     intra_date_ref = models.CharField(max_length=3, null=True, blank=True)
+    # slug = SlugField
     #Meta
     recorder = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -41,8 +44,8 @@ class Transaction(models.Model):
     
 class Entry(models.Model):
     ENTRY_TYPES = [
-        (1, "Debit"),
-        (2, "Credit"),
+        (1, "Dr"),
+        (2, "Cr"),
     ]
         
     transaction = models.ForeignKey(

@@ -3,17 +3,7 @@ from django.db import models
 from django.urls import reverse
 
 class AccountLevel1(models.Model):
-    CHART_OF_ACCOUNT = [
-        ("1","Asset"),
-        ("2","Liability"),
-        ("3","Equity"),
-        ("4","Revenue"),
-        ("5","Expense"),
-        ("6","Gain"),
-        ("7","Loss"),
-    ]
-
-    code = models.CharField(max_length=1, choices=CHART_OF_ACCOUNT, unique=True)
+    code = models.CharField(max_length=1, unique=True)
     name = models.CharField(max_length=50)
     guideline = models.TextField(null=True, blank=True)
     
@@ -26,23 +16,14 @@ class AccountLevel1(models.Model):
         return f"{self.code} | {self.name}"
 
 class AccountLevel2(models.Model):
-    ACCOUNT_TYPES = [
-        ("11","Current Asset"),
-        ("12","Fixed Asset"),
-        ("21","Current Liability"),
-        ("22","Long-term Liability"),
-        ("31","Common Stock"),
-        ("32","Preferred Stock"),
-        ("33","Retained Earning"),
-        ("41","Personal Revenue"),
-        ("42","Corporate Revenue"),
-        ("51","Personal Expense"),
-        ("52","Corporate Expense"),
+    BALANCE_TYPE = [
+        (1, "Dr"),
+        (2, "Cr"),
     ]
-
-    code = models.CharField(max_length=2, choices=ACCOUNT_TYPES, unique=True)
+    code = models.CharField(max_length=2, unique=True)
     name = models.CharField(max_length=50)
     guideline = models.TextField(null=True, blank=True)
+    balance = models.IntegerField(choices=BALANCE_TYPE)
     level1 = models.ForeignKey(AccountLevel1, related_name="level2_account", on_delete=models.CASCADE)
 
     class Meta:
@@ -54,67 +35,14 @@ class AccountLevel2(models.Model):
         return f"{self.code} | {self.name}"
 
 class AccountLevel3(models.Model):
-    MAIN_ACCOUNT = [
-        #Asset 11
-        ("1100", "Cash"),
-        ("1102", "Deposit"),
-        ("1103", "E-wallet"),
-        ("1104", "Debit Card"),
-        ("1105", "Account Receivable(AR)"),
-        #Asset 12
-        ("1201", "Inventory"),
-        ("1202", "Equipment"),
-        ("1203", "Vehicle"),
-        ("1204", "Taxes Receivable"),
-        ("1205", "Accured Wage"),
-        #Liability 21
-        ("2101", "Credit Card"),
-        ("2102", "Account Payable(AP)"),
-        ("2103", "Accured Expense"),
-        #Liability 22
-        ("2201","Loan"),
-        ("2202","Taxes Payable"),
-        #Equity
-        ("3100", "Common Stock"),
-        ("3200", "Preferred Stock"),
-        ("3300", "Retained Earning"),
-        #Personal Income
-        ("4101", "Salary Revenue"),
-        ("4102", "Wage Revenue"),
-        ("4103", "Licensing Revenue"),
-        ("4104", "Interest Revenue"),
-        ("4105", "Rent Revenue"),
-        ("4106", "Business Revenue"),
-        ("4107", "Scholarship Stipend"),
-        ("4108", "Allowance"),
-        #Business Revenue
-        ("4211", "Goods"),
-        ("4212", "Services"),
-        ("4213", "Products"),   
-        ("4214", "Subsciptions"),
-        #Personal Expenses
-        ("5101", "Food Expense"),
-        ("5102", "Transportation Expense"),
-        ("5103", "Shopping Expense"),
-        ("5104", "Utilities Bill"),
-        ("5105", "Health Expense"),
-        ("5106", "Education Expense"),
-        ("5107", "Social & Recreation Expense"),
-        ("5108", "Family Expense"),
-        ("5109", "Miscellaneous Expense"),
-        ("5110", "Accommodation Expense"),
-        #Business Expense
-        ("5201","Payroll"),
-        ("5202","Rent"),
-        ("5203","Travel Expense"),
-        ("5204","Depreciation"),
-        ("5205","Utilities Expense"),
-        ("5206","Cost of Sales"),
+    BALANCE_TYPE = [
+        (1, "Dr"),
+        (2, "Cr"),
     ]
-
-    code = models.CharField(max_length=4, choices=MAIN_ACCOUNT, unique=True)
+    code = models.CharField(max_length=4, unique=True, primary_key=True)
     name = models.CharField(max_length=50)
     guideline = models.TextField(null=True, blank=True)
+    balance = models.IntegerField(choices=BALANCE_TYPE)
     level2 = models.ForeignKey(AccountLevel2 ,related_name="level3_account", on_delete=models.CASCADE)
 
     class Meta:
@@ -126,22 +54,29 @@ class AccountLevel3(models.Model):
         return f"{self.code} | {self.name}"
     
 class Account(models.Model):
+    
+    BALANCE_TYPE = [
+        (1, "Dr"),
+        (2, "Cr"),
+    ]
+    
     name = models.CharField(max_length=50)
-    super_account = models.ForeignKey(AccountLevel3, on_delete=models.CASCADE)
-    sub_account = models.CharField(max_length=3)
+    level3 = models.ForeignKey(AccountLevel3, on_delete=models.CASCADE)
+    sub_account = models.CharField(max_length=2)
     detailed_account = models.CharField(max_length=2, null=True, blank=True)
+    balance_adjustment = models.IntegerField(choices=BALANCE_TYPE, null=True, blank=True)
     guideline = models.TextField(null=True, blank=True)
     created_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True)
     
     @property
     def code(self):
-        coa = f"{self.super_account.code}{self.sub_account}"
+        coa = f"{self.level3.code}{self.sub_account}"
         if self.detailed_account :
             coa += f"-{self.detailed_account}"
         return coa
     
     class Meta:
-        ordering = ["super_account","sub_account","detailed_account"]
+        ordering = ["level3","sub_account","detailed_account"]
 
     def __str__(self):
         return f"{self.code} | {self.name}"

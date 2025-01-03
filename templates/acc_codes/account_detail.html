@@ -24,13 +24,15 @@
                 </li>
                 <li class="d-flex align-items-start">
                     <span class="col-3">Account Type: </span>
-                    {% for type in account_type %}
-                    <span class="badge bg-secondary">{{ type }}</span>
-                    {% endfor %}
+                    
+                    <span class="badge bg-secondary">
+                        {% for type in account_type %}{{ type }}{% endfor %}
+                    </span>
+                    
                 </li>
                 <li class="d-flex align-items-start">
                     <span class="col-3">Group of Account: </span>
-                    <span class="badge bg-secondary">{{ object.super_account }}</span>
+                    <span class="badge bg-secondary">{{ object.level3 }}</span>
                 </li>
                 <li class="d-flex align-items-start"><span class="col-4">Transaction Count: </span></li>
                 <li class="d-flex align-items-start"><span class="col-4">Last Recorded: </span></li>

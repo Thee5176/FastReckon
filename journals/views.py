@@ -19,8 +19,13 @@ class TransactionCreateView(LoginRequiredMixin, CreateView):
     fields = ["book", "description", "date"]
     
     def form_valid(self, form):
+        # auto add user
         form.instance.recorder = self.request.user
-        return super().form_valid(form)
+        # validate dr/cr
+        if form.instance.is_balanced:
+            return super().form_valid(form)
+        else:
+            raise ValueError("Invalid: Transaction Imbalanced")
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
