@@ -24,7 +24,7 @@ class AccountLevel2(models.Model):
     name = models.CharField(max_length=50)
     guideline = models.TextField(null=True, blank=True)
     balance = models.IntegerField(choices=BALANCE_TYPE)
-    level1 = models.ForeignKey(AccountLevel1, related_name="level2_account", on_delete=models.CASCADE)
+    level1 = models.ForeignKey(AccountLevel1, related_name="level2_accounts", on_delete=models.CASCADE)
 
     class Meta:
         ordering = ["code"]
@@ -43,7 +43,7 @@ class AccountLevel3(models.Model):
     name = models.CharField(max_length=50)
     guideline = models.TextField(null=True, blank=True)
     balance = models.IntegerField(choices=BALANCE_TYPE)
-    level2 = models.ForeignKey(AccountLevel2 ,related_name="level3_account", on_delete=models.CASCADE)
+    level2 = models.ForeignKey(AccountLevel2 ,related_name="level3_accounts", on_delete=models.CASCADE)
 
     class Meta:
         ordering = ["code"]
@@ -61,7 +61,7 @@ class Account(models.Model):
     ]
     
     name = models.CharField(max_length=50)
-    level3 = models.ForeignKey(AccountLevel3, on_delete=models.CASCADE)
+    level3 = models.ForeignKey(AccountLevel3, related_name="accounts", on_delete=models.CASCADE)
     sub_account = models.CharField(max_length=2)
     detailed_account = models.CharField(max_length=2, null=True, blank=True)
     balance_adjustment = models.IntegerField(choices=BALANCE_TYPE, null=True, blank=True)
@@ -77,6 +77,8 @@ class Account(models.Model):
     
     class Meta:
         ordering = ["level3","sub_account","detailed_account"]
+        verbose_name = ("Account")
+        verbose_name_plural = ("Accounts")
 
     def __str__(self):
         return f"{self.code} | {self.name}"

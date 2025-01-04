@@ -28,10 +28,10 @@ class AccountColorCodeMixin(View):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        if 'account_list' in context:
-            context['account_list'] = self.add_query_color_code(context['account_list'])
-        elif 'object' in context:
+        if 'object' in context:         #DetailView, UpdateView
             context['object'] = self.add_obj_color_code(context['object'])
+        elif 'account_list' in context: #ListView
+            context['account_list'] = self.add_query_color_code(context['account_list'])
         elif 'queryset' in context:
             context['queryset'] = self.add_query_color_code(context['queryset'])
         
