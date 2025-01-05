@@ -11,9 +11,17 @@
         <p>Are you sure you want to delete transaction {{ object. }} ?</p>
         <div class="container d-flex justify-content-begin">
             <input class="btn btn-danger" type="submit" value="Delete">
-            <a class="btn btn-warning ms-auto" href="{% url "transaction_update" object.id %}">Back</a>
+            <a class="btn btn-warning ms-auto" href="{% url "transaction_list" %}">Back</a>
         </div>
     </form>
 </div>
+<script>
+    $(document).ready(function() {
+        $('.datepicker').datepicker({
+            format: 'yyyy-mm-dd',
+            autoclose: true,
+        });
+    });
+</script>
 
 {% endblock content %}

@@ -1,6 +1,8 @@
 from django.conf import settings
 from django.db import models
+from django.db.models import Max
 from django.urls import reverse
+from django.utils.text import slugify
 
 from acc_codes.models import Account, AccountLevel3
 from acc_books.models import Book
@@ -8,35 +10,50 @@ from acc_books.models import Book
 class Transaction(models.Model):
     book = models.ForeignKey(
         Book,
-        related_name ="transaction",
+        related_name ="transactions",
         on_delete=models.CASCADE
     )
-    description = models.TextField()
     date = models.DateField()
-    intra_date_ref = models.CharField(max_length=3, null=True, blank=True)
-    # slug = SlugField
+    intra_month_ref = models.IntegerField(blank=True)
+    description = models.TextField()
+    slug = models.SlugField(unique=True, max_length=9)
+    has_receipt = models.BooleanField(default=False)
     #Meta
     recorder = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
-    def total_debits(self):
-        return sum(entry.amount for entry in self.entries.filter(entry_type=1))
+    class Meta:
+        verbose_name = ("Transaction")
+        verbose_name_plural = ("Transactions")
+        constraints = [
+            models.UniqueConstraint(fields=['date','intra_month_ref'], name='unique_intra_month_ref')
+        ]
     
-    def total_credits(self):
-        return sum(entry.amount for entry in self.entries.filter(entry_type=2))
-    
-    def is_balanced(self):
-        return self.total_debits == self.total_credits
-
-    def ask_for_ref(self):
-        return self.book_set.get_latest_ref
-    
-    def auto_ref(self):
-        self.ref = self.ask_for_ref
+    def save(self, *args, **kwargs):
+        """
+        Automatically add intra_month_ref and slug
+        """
+        if not self.intra_month_ref:
+            # Filter ref for designated month
+            this_month = self.date.strftime("%m")
+            # Get latest transaction's ref for the same month
+            latest_ref = Transaction.objects.filter(date__month=this_month).aggregate(max_ref=Max('intra_month_ref'))
+            if latest_ref['max_ref']:
+                self.intra_month_ref = latest_ref['max_ref'] + 1
+            else:
+                self.intra_month_ref = 1
+            
+        if not self.slug:
+            book = self.book.abbr
+            formatted_date = self.date.strftime("%y%m")
+            ref = self.intra_month_ref
+            self.slug = slugify(f"{book}{formatted_date}-{ref}")
+            
+        super().save(*args, **kwargs)
     
     def get_absolute_url(self):
-        return reverse("transaction_detail", kwargs={"pk": self.pk})
+        return reverse("transaction_detail", kwargs={"slug": self.slug})
     
     def __str__(self):
         return f"{self.book_id}{self.id}"
@@ -54,10 +71,19 @@ class Entry(models.Model):
         on_delete=models.CASCADE
     )
     
-    account = models.ForeignKey(
+    code = models.ForeignKey(
         Account,
         related_name ="entries",
         on_delete=models.CASCADE
     )
     entry_type = models.IntegerField(choices=ENTRY_TYPES)
-    amount = models.DecimalField(max_digits=5, decimal_places=2)
+    amount = models.DecimalField(max_digits=12, decimal_places=2)
+    
+    class Meta:
+        verbose_name = ("Entry")
+        verbose_name_plural = ("Entries")
+        ordering = ["entry_type"]
+    
+    def __str__(self):
+        return f"{self.transaction}-{self.entry_type}"
+    

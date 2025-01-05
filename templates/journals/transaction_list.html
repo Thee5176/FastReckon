@@ -3,7 +3,11 @@
 {% block title %}Transaction Records{% endblock title %}
 
 {% block content %}
-<h2 class="my-3 text-muted">Transaction List</h2>
+<div class="row my-3">
+    <h2 class="text-muted col-8">Transaction List</h2>
+    <a class="btn btn-success col-4" href="{% url "transaction_create" %}">Add Reckon</a>
+    
+</div>
 <hr>
 <div
         class="table-responsive-md"
@@ -15,23 +19,23 @@
                 <tr>
                     <th>Code</th>
                     <th>Name</th>
-                    <th>Record Count</th>
-                    <th>Last Transaction</th>
+                    <th>Dr</th>
+                    <th>Cr</th>
                 </tr>
             </thead>
             {% for transaction in transaction_list %}
             <tbody class="table-group-divider">
                 <tr
-                class="table-{{ transaction.color_code }} position-relative"
+                class="table-{{ transaction.entries.account.color_code }} position-relative"
                 >
                     <td scope="row">
-                        <a href="{{ transaction.get_absolute_url }}" class="stretched-link text-decoration-none text-dark">
-                            {{ transaction.entries }}
+                        <a href="{% url "transaction_detail" transaction.slug %}" class="stretched-link text-decoration-none text-uppercase text-dark">
+                            {{ transaction.slug }}
                         </a>
                     </td>
-                    <td>{{ transaction.name }}</td>
-                    <td>#</td>
-                    <td>#</td>
+                    <td>{{ transaction.description }}</td>
+                    <td>{{ entries. }}</td>
+                    <td>{{ account }}</td>
                 </tr>
             </tbody>
             {% empty %}

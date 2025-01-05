@@ -1,62 +1,62 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light">
-    <div class="container-fluid d-flex">
-      <!--Nav Brand-->
+    <div class="container-fluid">
+      <!--Navbar Brand-->
       <a class="navbar-brand logo-line" href="{% url 'home' %}">Fastreckon</a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <!--Navbar Toggler-->
+      <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarSupportedContent" 
+        aria-expanded="false" 
+        aria-controls="navbarSupportedContent" 
+        aria-label="Toggle navigation">
         <span class="btn btn-sm navbar-toggler-icon"></span>
       </button>
 
-      <ul class="d-flex navbar-nav container collapse navbar-collapse">
-        {% if user.is_authenticated %}
-        <!--Nav Menu-->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="journal" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-journal-check"></i> Start Bookkeeping
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{% url "book_list" %}">Book of Account</a></li>
-            <li><a class="dropdown-item" href="{% url "account_list" %}">Code of Account</a></li>
-            <li><a class="dropdown-item" href="{% url "transaction_create" %}">Journal Record</a></li>
-            <li><a class="dropdown-item disabled" href="#">Financial Report</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="journal" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-cart-check"></i> Start Mealplanning
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item disabled" href="#">Meal Prep Card</a></li>
-          </ul>
-        </li>
-        <!--Nav User-->
-        <li class="nav-item dropdown ms-md-auto">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-person-circle"></i> {{ user.username }}
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item disabled" href="#">Profile</a></li>
-            <li><a class="dropdown-item disabled" href="#">Setting</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="{% url "account_logout" %}">Logout</a></li>
-          </ul>
-        </li>
-        {% else %}
-        <!--Nav Pages-->
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url "home" %}">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url "about" %}">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url "account_login" %}">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url "account_signup" %}">Sign Up</a>
-        </li>
-        {% endif %}
-          
-      </ul>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="container navbar-nav bs-auto mb-2 mgb-lg-0 justify-content-center">
+          {% if user.is_authenticated %}
+          <!--Nav Menu-->
+          {% include "partials/header_menu/journals.html" %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="journal" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-cart-check"></i> Start Mealplanning
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item disabled" href="#">Meal Prep Card</a></li>
+            </ul>
+          </li>
+          <!--Nav User-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-person-circle"></i> {{ user.username }}
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item disabled" href="#">Profile</a></li>
+              <li><a class="dropdown-item disabled" href="#">Setting</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{% url "account_logout" %}">Logout</a></li>
+            </ul>
+          </li>
+          {% else %}
+          <!--Nav Pages-->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url "home" %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url "about" %}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url "account_login" %}">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url "account_signup" %}">Sign Up</a>
+          </li>
+          {% endif %}
+            
+        </ul>
+      </div>
     </div>
   </nav>

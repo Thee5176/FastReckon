@@ -4,4 +4,48 @@
 
 {% block content %}
 <h2 class="my-3 text-muted">Transaction Detail</h2>
+<div class="container-fluid justify-content-begin">
+    <p class="row">
+        <span class="col-12">Book: {{ object.book }}</span>
+    </p>
+    <p class="row">
+        <span class="col-8">Date: {{ object.date }}</span>
+        <span class="col-4">Monthly Ref: {{ object.intra_month_ref }}</span>
+    </p>
+    <p class="row">
+        <span class="col-8">Description: {{ object.description }}</span>
+        <span class="col-4">Receipt Status: {% if object.has_receipt %}<i class="bi bi-check-circle success"></i>{% else %}<i class="bi bi-dash-circle-dotted"></i>{% endif %}</span>
+    </p>
+</div>
+<div class="container table-responsive">
+    <div
+        class="table-responsive-md"
+    >
+        <table
+            class="table table-light"
+        >
+            <thead>
+                <tr>
+                    <th scope="col-2">Type</th>
+                    <th scope="col-4">Account</th>
+                    <th scope="col-4">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in entries %}
+                    <tr class="table-{ color_by_code }}">
+                        <th scope="row">{{ entry.entry_type }}</th>
+                        <td>{{ entry.code }}</td>
+                        <td>{{ entry.amount }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="row justify-content-between my-3">
+        <a class="btn btn-primary col-4" href="{% url "transaction_update" object.slug %}">! Update Transaction</a>
+        <a class="btn btn-danger col-4" href="{% url "transaction_delete" object.slug %}">- Delete Transaction</a>
+    </div>
+</div>
+
 {% endblock content %}

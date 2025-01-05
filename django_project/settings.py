@@ -53,9 +53,11 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.github',
     # 'allauth.socialaccount.providers.google',
     # 'allauth.socialaccount.providers.line',
-    # Boostrap5
+    # Third Party
     'crispy_forms',
     'crispy_bootstrap5',
+    'widget_tweaks',
+    'debug_toolbar',
     # Local
     'accounts.apps.AccountsConfig',
     'acc_books.apps.AccBooksConfig',
@@ -76,6 +78,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # allauth middleware
     'allauth.account.middleware.AccountMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'django_project.urls'
@@ -211,3 +214,9 @@ SOCIALACCOUNT_PROVIDERS = {
     #     }
     # },
 }
+
+# django-debug-toolbar
+import socket
+
+hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
