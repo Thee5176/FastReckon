@@ -63,8 +63,7 @@ INSTALLED_APPS = [
     'acc_books.apps.AccBooksConfig',
     'acc_codes.apps.AccCodesConfig',
     'pages.apps.PagesConfig',
-    'journals.apps.JournalsConfig',
-    'mealpreps.apps.MealprepsConfig',
+    'transactions.apps.TransactionsConfig',
 ]
 
 MIDDLEWARE = [

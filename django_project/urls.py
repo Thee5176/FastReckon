@@ -27,6 +27,6 @@ urlpatterns = [
     path("", include('pages.urls')),
     path("bookofaccounts/", include('acc_books.urls')),
     path("codeofaccounts/", include('acc_codes.urls')),
-    path("journals/", include('journals.urls')),
+    path("transactions/", include('transactions.urls')),
     path("__debug__/", include('debug_toolbar.urls'))
 ]
