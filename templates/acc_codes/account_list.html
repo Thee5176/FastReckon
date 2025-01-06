@@ -19,7 +19,7 @@
                     <th>Code</th>
                     <th>Name</th>
                     <th>Record Count</th>
-                    <th>Last Transaction</th>
+                    <th>Balance</th>
                 </tr>
             </thead>
             {% for account in account_list %}
@@ -33,8 +33,8 @@
                         </a>
                     </td>
                     <td>{{ account.name }}</td>
-                    <td>#</td>
-                    <td>#</td>
+                    <td>{{ account.record_count }}</td>
+                    <td>{{ account.balance }}</td>
                 </tr>
             </tbody>
             {% empty %}

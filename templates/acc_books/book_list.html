@@ -19,6 +19,7 @@
                     <th>Abbreviation</th>
                     <th>Name</th>
                     <th>Guideline</th>
+                    <th>#Records</th>
                 </tr>
             </thead>
             {% for book in book_list %}
@@ -33,6 +34,7 @@
                     </td>
                     <td>{{ book.name }}</td>
                     <td>{{ book.guideline }}</td>
+                    <td>{{ book.record_count }}</td>
                 </tr>
             </tbody>
             {% empty %}

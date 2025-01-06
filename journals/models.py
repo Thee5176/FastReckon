@@ -8,6 +8,11 @@ from acc_codes.models import Account, AccountLevel3
 from acc_books.models import Book
     
 class Transaction(models.Model):
+    SHOPNAME = {
+        1:"まいばすけっと",
+        2:"OK",
+    }
+    
     book = models.ForeignKey(
         Book,
         related_name ="transactions",
@@ -15,9 +20,10 @@ class Transaction(models.Model):
     )
     date = models.DateField()
     intra_month_ref = models.IntegerField(blank=True)
-    description = models.TextField()
+    description = models.TextField() #TODO : Auto Generate
     slug = models.SlugField(unique=True, max_length=9)
     has_receipt = models.BooleanField(default=False)
+    shop = models.IntegerField(choices=SHOPNAME, null=True, blank=True)
     #Meta
     recorder = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -30,6 +36,12 @@ class Transaction(models.Model):
             models.UniqueConstraint(fields=['date','intra_month_ref'], name='unique_intra_month_ref')
         ]
     
+    def auto_narration(self):
+        pass
+        # self.description = f"Being {dr_account} {action_kw} by {cr_account}."
+        #dr/cr_account might be in list
+        #action_kw is determine by combination of account
+
     def save(self, *args, **kwargs):
         """
         Automatically add intra_month_ref and slug
@@ -51,6 +63,12 @@ class Transaction(models.Model):
             self.slug = slugify(f"{book}{formatted_date}-{ref}")
             
         super().save(*args, **kwargs)
+    
+    def total_amount(self):
+        total = 0
+        for entry in self.entries.all():
+            total += entry.amount
+        return total/2
     
     def get_absolute_url(self):
         return reverse("transaction_detail", kwargs={"slug": self.slug})
@@ -86,4 +104,3 @@ class Entry(models.Model):
     
     def __str__(self):
         return f"{self.transaction}-{self.entry_type}"
-    

@@ -4,7 +4,7 @@ from django.views.generic import ListView, DetailView, FormView
 from django.views.generic.detail import SingleObjectMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
-from .forms import TransactionForm, EntryFormSet
+from .forms import TransactionForm, EntryFormSet, EntryFormSet_update
 from .mixins import TransactionFormValidator
 from .models import Transaction, Entry
 
@@ -41,7 +41,7 @@ class TransactionUpdateView(LoginRequiredMixin, UserPassesTestMixin, Transaction
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         transaction = self.get_object()
-        context["entry_formset"] = EntryFormSet(queryset=Entry.objects.filter(transaction=transaction))
+        context["entry_formset"] = EntryFormSet_update(queryset=Entry.objects.filter(transaction=transaction))
         context["view_name"] = "Update"
         return context
     

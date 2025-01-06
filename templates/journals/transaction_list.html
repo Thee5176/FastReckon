@@ -17,10 +17,11 @@
         >
             <thead class="table-light">
                 <tr>
+                    <th>Date</th>
                     <th>Code</th>
                     <th>Name</th>
-                    <th>Dr</th>
-                    <th>Cr</th>
+                    <th>Receipt</th>
+                    <th>Amount</th>
                 </tr>
             </thead>
             {% for transaction in transaction_list %}
@@ -28,29 +29,32 @@
                 <tr
                 class="table-{{ transaction.entries.account.color_code }} position-relative"
                 >
-                    <td scope="row">
+                    <td>{{ transaction.date }}</td>    
+                    <td>
                         <a href="{% url "transaction_detail" transaction.slug %}" class="stretched-link text-decoration-none text-uppercase text-dark">
                             {{ transaction.slug }}
                         </a>
                     </td>
                     <td>{{ transaction.description }}</td>
-                    <td>{{ entries. }}</td>
-                    <td>{{ account }}</td>
+                    <td>{% if transaction.has_receipt %}<i class="bi bi-check-circle success"></i>{% else %}<i class="bi bi-dash-circle-dotted"></i>{% endif %}</td>
+                    <td>{{ transaction.total_amount }}</td>
                 </tr>
             </tbody>
             {% empty %}
             <tbody class="table-group-divider">
                 <tr
-                    class="table-light"
+                class="table-light"
                 >
-                    <td scope="row">-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                </tr>
+                <td colspan=6 class='text-danger'>No Transaction in record</td>
+            </tr>
             </tbody>
-            <p class='text-danger'>No Transaction in record</p>
             {% endfor %}
+            <tfoot>
+                <tr>
+                    <td colspan=4>total</td>
+                    <td>#</td>
+                </tr>
+            </tfoot>
         </table>
     </div>
 {% endblock content %}

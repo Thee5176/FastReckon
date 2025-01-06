@@ -68,6 +68,11 @@ class Account(models.Model):
     guideline = models.TextField(null=True, blank=True)
     created_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True)
     
+    class Meta:
+        ordering = ["level3","sub_account","detailed_account"]
+        verbose_name = ("Account")
+        verbose_name_plural = ("Accounts")
+    
     @property
     def code(self):
         coa = f"{self.level3.code}{self.sub_account}"
@@ -75,11 +80,21 @@ class Account(models.Model):
             coa += f"-{self.detailed_account}"
         return coa
     
-    class Meta:
-        ordering = ["level3","sub_account","detailed_account"]
-        verbose_name = ("Account")
-        verbose_name_plural = ("Accounts")
+    @property
+    def record_count(self):
+        return self.entries.all().count
 
+    @property
+    def balance(self):
+        account_type = self.balance_adjustment if self.balance_adjustment else self.level3.balance
+        balance = 0
+        for entry in self.entries.all():
+            if entry.entry_type == account_type:
+                balance += entry.amount
+            else:
+                balance -= entry.amount
+        return f"{balance}" #TODO how to separate entry for each books? entry->transaction->book
+    
     def __str__(self):
         return f"{self.code} | {self.name}"
     
