@@ -56,8 +56,8 @@ INSTALLED_APPS = [
     # Third Party
     'crispy_forms',
     'crispy_bootstrap5',
-    'widget_tweaks',
     'debug_toolbar',
+    'widget_tweaks',
     # Local
     'accounts.apps.AccountsConfig',
     'acc_books.apps.AccBooksConfig',

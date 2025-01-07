@@ -1,4 +1,5 @@
 {% extends "_base.html" %}
+{% load crispy_forms_tags %}
 
 {% block title %}Transaction Records{% endblock title %}
 
@@ -6,9 +7,15 @@
 <div class="row my-3">
     <h2 class="text-muted col-8">Transaction List</h2>
     <a class="btn btn-success col-4" href="{% url "transaction_create" %}">Add Reckon</a>
-    
 </div>
 <hr>
+<div class='container'>
+    <form method="post" action="{% url "transaction_list" %}" class='d-flex my-2'>
+        {% csrf_token %}
+        <input class='form-control me-2' type="text" name="keyword" placeholder='Enter keyword' required>
+        <input class="btn btn-success" type="submit" value="Search">
+    </form>
+</div>
 <div
         class="table-responsive-md"
     >
