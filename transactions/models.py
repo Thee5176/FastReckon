@@ -32,6 +32,7 @@ class Transaction(models.Model):
     class Meta:
         verbose_name = ("Transaction")
         verbose_name_plural = ("Transactions")
+        ordering = ["date","intra_month_ref"]
         constraints = [
             models.UniqueConstraint(fields=['date','intra_month_ref'], name='unique_intra_month_ref')
         ]

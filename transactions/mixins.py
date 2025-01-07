@@ -27,7 +27,6 @@ class TransactionFormValidator:
                 return self.render_to_response(
                     self.get_context_data(form=form, formset=formset)
                 )
-
             #Assign User before save transaction
             transaction.recorder = self.request.user
             transaction.save()
@@ -48,8 +47,7 @@ class TransactionFormValidator:
         Add validation for additional form context: EntryFormSet
         """
         formset = EntryFormset(self.request.POST)
-        formset.non_form_errors().append("Entries Form is invalid.")
-        print("Entries Form is invalid")
+        print("Transaction Form is invalid")
         return self.render_to_response(
             self.get_context_data(form=form, formset=formset)
         )
