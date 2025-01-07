@@ -1,0 +1,314 @@
+[
+  {
+    "model": "transactions.transaction",
+    "pk": 1,
+    "fields": {
+      "book": 2,
+      "date": "2025-01-01",
+      "intra_month_ref": 1,
+      "description": "Being MealPrep paid by FamiPay",
+      "slug": "ja2501-1",
+      "has_receipt": true,
+      "shop": 1,
+      "recorder": 1,
+      "created_at": "2025-01-03T10:00:09.278Z",
+      "updated_at": "2025-01-05T09:49:21.951Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": 2,
+    "fields": {
+      "book": 2,
+      "date": "2025-01-02",
+      "intra_month_ref": 2,
+      "description": "Being MealPrep paid by MerCard",
+      "slug": "ja2501-2",
+      "has_receipt": true,
+      "shop": 1,
+      "recorder": 1,
+      "created_at": "2025-01-04T03:21:39.657Z",
+      "updated_at": "2025-01-05T09:50:31.771Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": 3,
+    "fields": {
+      "book": 2,
+      "date": "2025-01-03",
+      "intra_month_ref": 3,
+      "description": "Being Train Ticket paid by Suica IC.",
+      "slug": "ja2501-3",
+      "has_receipt": false,
+      "shop": null,
+      "recorder": 1,
+      "created_at": "2025-01-05T05:06:16.959Z",
+      "updated_at": "2025-01-05T05:06:16.959Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": 4,
+    "fields": {
+      "book": 2,
+      "date": "2025-01-03",
+      "intra_month_ref": 4,
+      "description": "Being Snacks paid by PayPay",
+      "slug": "ja2501-4",
+      "has_receipt": false,
+      "shop": null,
+      "recorder": 1,
+      "created_at": "2025-01-05T05:20:16.482Z",
+      "updated_at": "2025-01-05T05:20:16.482Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": 5,
+    "fields": {
+      "book": 2,
+      "date": "2025-01-04",
+      "intra_month_ref": 5,
+      "description": "Being MealPrep paid by MerCard",
+      "slug": "ja2501-5",
+      "has_receipt": true,
+      "shop": null,
+      "recorder": 1,
+      "created_at": "2025-01-05T06:52:06.483Z",
+      "updated_at": "2025-01-05T08:16:42.025Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": 8,
+    "fields": {
+      "book": 2,
+      "date": "2025-01-04",
+      "intra_month_ref": 6,
+      "description": "Being Cash Transfer to Suica IC",
+      "slug": "ja2501-6",
+      "has_receipt": true,
+      "shop": null,
+      "recorder": 1,
+      "created_at": "2025-01-05T16:00:12.617Z",
+      "updated_at": "2025-01-05T16:00:12.617Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": 9,
+    "fields": {
+      "book": 2,
+      "date": "2025-01-01",
+      "intra_month_ref": 0,
+      "description": "Being previous year's balance brought into book",
+      "slug": "JA2501-0",
+      "has_receipt": false,
+      "shop": null,
+      "recorder": 1,
+      "created_at": "2025-01-05T16:19:57.821Z",
+      "updated_at": "2025-01-05T16:22:07.346Z"
+    }
+  },
+  {
+    "model": "transactions.entry",
+    "pk": 1,
+    "fields": {
+      "transaction": 1,
+      "code": 26,
+      "entry_type": 1,
+      "amount": "486.00"
+    }
+  },
+  {
+    "model": "transactions.entry",
+    "pk": 2,
+    "fields": {
+      "transaction": 1,
+      "code": 7,
+      "entry_type": 2,
+      "amount": "486.00"
+    }
+  },
+  {
+    "model": "transactions.entry",
+    "pk": 3,
+    "fields": {
+      "transaction": 2,
+      "code": 26,
+      "entry_type": 1,
+      "amount": "939.00"
+    }
+  },
+  {
+    "model": "transactions.entry",
+    "pk": 4,
+    "fields": {
+      "transaction": 2,
+      "code": 22,
+      "entry_type": 2,
+      "amount": "939.00"
+    }
+  },
+  {
+    "model": "transactions.entry",
+    "pk": 5,
+    "fields": {
+      "transaction": 3,
+      "code": 34,
+      "entry_type": 1,
+      "amount": "167.00"
+    }
+  },
+  {
+    "model": "transactions.entry",
+    "pk": 6,
+    "fields": {
+      "transaction": 3,
+      "code": 6,
+      "entry_type": 2,
+      "amount": "167.00"
+    }
+  },
+  {
+    "model": "transactions.entry",
+    "pk": 7,
+    "fields": {
+      "transaction": 4,
+      "code": 8,
+      "entry_type": 2,
+      "amount": "135.00"
+    }
+  },
+  {
+    "model": "transactions.entry",
+    "pk": 8,
+    "fields": {
+      "transaction": 4,
+      "code": 28,
+      "entry_type": 1,
+      "amount": "135.00"
+    }
+  },
+  {
+    "model": "transactions.entry",
+    "pk": 9,
+    "fields": {
+      "transaction": 5,
+      "code": 26,
+      "entry_type": 1,
+      "amount": "1372.00"
+    }
+  },
+  {
+    "model": "transactions.entry",
+    "pk": 10,
+    "fields": {
+      "transaction": 5,
+      "code": 22,
+      "entry_type": 2,
+      "amount": "1372.00"
+    }
+  },
+  {
+    "model": "transactions.entry",
+    "pk": 11,
+    "fields": {
+      "transaction": 8,
+      "code": 6,
+      "entry_type": 1,
+      "amount": "900.00"
+    }
+  },
+  {
+    "model": "transactions.entry",
+    "pk": 12,
+    "fields": {
+      "transaction": 8,
+      "code": 2,
+      "entry_type": 2,
+      "amount": "900.00"
+    }
+  },
+  {
+    "model": "transactions.entry",
+    "pk": 13,
+    "fields": {
+      "transaction": 9,
+      "code": 2,
+      "entry_type": 1,
+      "amount": "7951.00"
+    }
+  },
+  {
+    "model": "transactions.entry",
+    "pk": 14,
+    "fields": {
+      "transaction": 9,
+      "code": 18,
+      "entry_type": 1,
+      "amount": "255456.00"
+    }
+  },
+  {
+    "model": "transactions.entry",
+    "pk": 15,
+    "fields": {
+      "transaction": 9,
+      "code": 6,
+      "entry_type": 1,
+      "amount": "172.00"
+    }
+  },
+  {
+    "model": "transactions.entry",
+    "pk": 16,
+    "fields": {
+      "transaction": 9,
+      "code": 7,
+      "entry_type": 1,
+      "amount": "2064.00"
+    }
+  },
+  {
+    "model": "transactions.entry",
+    "pk": 17,
+    "fields": {
+      "transaction": 9,
+      "code": 8,
+      "entry_type": 1,
+      "amount": "736.00"
+    }
+  },
+  {
+    "model": "transactions.entry",
+    "pk": 18,
+    "fields": {
+      "transaction": 9,
+      "code": 9,
+      "entry_type": 1,
+      "amount": "10558.00"
+    }
+  },
+  {
+    "model": "transactions.entry",
+    "pk": 19,
+    "fields": {
+      "transaction": 9,
+      "code": 22,
+      "entry_type": 1,
+      "amount": "1.00"
+    }
+  },
+  {
+    "model": "transactions.entry",
+    "pk": 20,
+    "fields": {
+      "transaction": 9,
+      "code": 50,
+      "entry_type": 2,
+      "amount": "276938.00"
+    }
+  }
+]

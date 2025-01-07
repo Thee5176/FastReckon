@@ -24,6 +24,16 @@ To get started with FastReckon, follow these steps:
    ```bash
    git clone https://github.com/Thee5176/FastReckon.git
    cd FastReckon
+   
+2. **Spin up Docker container**
+
+   ```bash
+   docker-compose up -d --build
+
+3. **Django Migration**
+
+   ```bash
+   docker-compose exec web python manage.py migrate
 
 ## 📈 Development
 

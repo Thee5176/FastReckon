@@ -1,0 +1,22 @@
+[
+    {
+        "model": "acc_books.book",
+        "pk": 1,
+        "fields": {
+            "name": "Thai Account",
+            "abbr": "TA",
+            "guideline": "",
+            "currency_sign": "¥"
+        }
+    },
+    {
+        "model": "acc_books.book",
+        "pk": 2,
+        "fields": {
+            "name": "Japanese Account",
+            "abbr": "JA",
+            "guideline": "",
+            "currency_sign": "฿"
+        }
+    }
+]
