@@ -1,0 +1,518 @@
+[
+    {
+        "model": "acc_codes.account",
+        "pk": 2,
+        "fields": {
+            "name": "Cash in hand",
+            "level3": "1101",
+            "sub_account": "01",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 3,
+        "fields": {
+            "name": "KBank 0333 (J-checking)",
+            "level3": "1102",
+            "sub_account": "01",
+            "detailed_account": "01",
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 4,
+        "fields": {
+            "name": "KBank 2911 (T-checking)",
+            "level3": "1102",
+            "sub_account": "01",
+            "detailed_account": "02",
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 5,
+        "fields": {
+            "name": "KBank 8119 (Room 723)",
+            "level3": "1102",
+            "sub_account": "01",
+            "detailed_account": "03",
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 6,
+        "fields": {
+            "name": "Suica IC",
+            "level3": "1103",
+            "sub_account": "01",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 7,
+        "fields": {
+            "name": "FamiPay",
+            "level3": "1103",
+            "sub_account": "02",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 8,
+        "fields": {
+            "name": "PayPay",
+            "level3": "1103",
+            "sub_account": "03",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 9,
+        "fields": {
+            "name": "YouTrip",
+            "level3": "1104",
+            "sub_account": "01",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 10,
+        "fields": {
+            "name": "Boarding Card",
+            "level3": "1104",
+            "sub_account": "02",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 11,
+        "fields": {
+            "name": "Dad AR",
+            "level3": "1105",
+            "sub_account": "01",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 12,
+        "fields": {
+            "name": "SuperHotel AW",
+            "level3": "1205",
+            "sub_account": "01",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 13,
+        "fields": {
+            "name": "En AW",
+            "level3": "1205",
+            "sub_account": "02",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 14,
+        "fields": {
+            "name": "Katsuya AW",
+            "level3": "1205",
+            "sub_account": "03",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 15,
+        "fields": {
+            "name": "SuperHotel Wage",
+            "level3": "4102",
+            "sub_account": "01",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 16,
+        "fields": {
+            "name": "En Wage",
+            "level3": "4102",
+            "sub_account": "02",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 17,
+        "fields": {
+            "name": "Katsuya Wage",
+            "level3": "4102",
+            "sub_account": "03",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 18,
+        "fields": {
+            "name": "ゆうちょ 1861",
+            "level3": "1102",
+            "sub_account": "02",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 19,
+        "fields": {
+            "name": "KBank Deposit Interest",
+            "level3": "4104",
+            "sub_account": "01",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 20,
+        "fields": {
+            "name": "ゆうちょ Deposit Interest",
+            "level3": "4104",
+            "sub_account": "02",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 21,
+        "fields": {
+            "name": "MerPay",
+            "level3": "1103",
+            "sub_account": "04",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 22,
+        "fields": {
+            "name": "MerCard",
+            "level3": "2101",
+            "sub_account": "01",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": "Limit Amount : 10,000 円"
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 23,
+        "fields": {
+            "name": "JASSO Scholarship",
+            "level3": "4107",
+            "sub_account": "01",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": "Duraion: 1 year (2024/4-2025/3)"
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 24,
+        "fields": {
+            "name": "Allowance from Dad",
+            "level3": "4108",
+            "sub_account": "01",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": "Monthly Amount: 40,000 円"
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 25,
+        "fields": {
+            "name": "Allowance from Mom",
+            "level3": "4108",
+            "sub_account": "02",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 26,
+        "fields": {
+            "name": "MealPrep",
+            "level3": "5101",
+            "sub_account": "01",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": "Main Ingredient:\r\n- Veg\r\nCabbage\r\nGreen Cabbage\r\nCarrot\r\nPumpkin\r\nPotato\r\nBean Sprout\r\n\r\n- Cond\r\nOnion\r\nGarlic\r\nChilly\r\n\r\n- Protein\r\nTofu\r\nNutto\r\nEgg\r\nMushroom\r\n\r\n- Carb\r\nBread\r\nUdon\r\nRice"
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 27,
+        "fields": {
+            "name": "Eat-out",
+            "level3": "5101",
+            "sub_account": "03",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 28,
+        "fields": {
+            "name": "Snack",
+            "level3": "5101",
+            "sub_account": "02",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": "Milk\r\nSoy Milk\r\nPeanut\r\nBakery"
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 29,
+        "fields": {
+            "name": "Commuter Pass",
+            "level3": "5102",
+            "sub_account": "01",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": "埼京線：十条駅→池袋駅\r\n１ヵ月:　 2,710　¥\r\n３ヵ月:　 7,730　¥\r\n６ヵ月:　14,650　¥"
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 30,
+        "fields": {
+            "name": "Kbank The Passion VISA",
+            "level3": "2101",
+            "sub_account": "02",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 31,
+        "fields": {
+            "name": "SCB JCB Platinum",
+            "level3": "2101",
+            "sub_account": "03",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 32,
+        "fields": {
+            "name": "Mom AP",
+            "level3": "2102",
+            "sub_account": "01",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 33,
+        "fields": {
+            "name": "Clothing",
+            "level3": "5103",
+            "sub_account": "03",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 34,
+        "fields": {
+            "name": "Non-Commuter Pass",
+            "level3": "5102",
+            "sub_account": "02",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 35,
+        "fields": {
+            "name": "Appliances and Gadgets",
+            "level3": "5103",
+            "sub_account": "02",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 36,
+        "fields": {
+            "name": "STEP CLOUD Utilities",
+            "level3": "5104",
+            "sub_account": "01",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 37,
+        "fields": {
+            "name": "National Health Insurance",
+            "level3": "5105",
+            "sub_account": "01",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 38,
+        "fields": {
+            "name": "Medical Bills",
+            "level3": "5105",
+            "sub_account": "02",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 39,
+        "fields": {
+            "name": "Glocery",
+            "level3": "5103",
+            "sub_account": "01",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 40,
+        "fields": {
+            "name": "TIU Tuition Fee",
+            "level3": "5106",
+            "sub_account": "01",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": "2024/4  : 410,000\r\n2024/10 : 410,000\r\n2025/4  : 460,000\r\n2025/10 : 460,000\r\n2026/4  : 460,000\r\n2026/10 : 460,000"
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 41,
+        "fields": {
+            "name": "Meal Treat",
+            "level3": "5107",
+            "sub_account": "01",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 42,
+        "fields": {
+            "name": "Other Expenses",
+            "level3": "5109",
+            "sub_account": "00",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 43,
+        "fields": {
+            "name": "STEP CLOUD Rent",
+            "level3": "5110",
+            "sub_account": "01",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 44,
+        "fields": {
+            "name": "Services Fee",
+            "level3": "5109",
+            "sub_account": "01",
+            "detailed_account": null,
+            "balance_adjustment": null,
+            "guideline": ""
+        }
+    }
+]
