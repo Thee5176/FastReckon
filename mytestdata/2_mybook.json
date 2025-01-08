@@ -6,7 +6,8 @@
             "name": "Thai Account",
             "abbr": "TA",
             "guideline": "",
-            "currency_sign": "¥"
+            "currency_sign": "¥",
+            "created_by": 1
         }
     },
     {
@@ -16,7 +17,8 @@
             "name": "Japanese Account",
             "abbr": "JA",
             "guideline": "",
-            "currency_sign": "฿"
+            "currency_sign": "฿",
+            "created_by": 1
         }
     }
 ]

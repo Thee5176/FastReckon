@@ -1,14 +1,28 @@
 [
     {
         "model": "acc_codes.account",
+        "pk": 1,
+        "fields": {
+            "name": "Common Stock",
+            "level3": "3001",
+            "sub_account": "01",
+            "detailed_account": null,
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
         "pk": 2,
         "fields": {
             "name": "Cash in hand",
             "level3": "1101",
             "sub_account": "01",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -19,8 +33,9 @@
             "level3": "1102",
             "sub_account": "01",
             "detailed_account": "01",
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -31,8 +46,9 @@
             "level3": "1102",
             "sub_account": "01",
             "detailed_account": "02",
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -43,8 +59,9 @@
             "level3": "1102",
             "sub_account": "01",
             "detailed_account": "03",
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -55,8 +72,9 @@
             "level3": "1103",
             "sub_account": "01",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -67,8 +85,9 @@
             "level3": "1103",
             "sub_account": "02",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -79,8 +98,9 @@
             "level3": "1103",
             "sub_account": "03",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -91,8 +111,9 @@
             "level3": "1104",
             "sub_account": "01",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -103,8 +124,9 @@
             "level3": "1104",
             "sub_account": "02",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -115,8 +137,9 @@
             "level3": "1105",
             "sub_account": "01",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -127,8 +150,9 @@
             "level3": "1205",
             "sub_account": "01",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -139,8 +163,9 @@
             "level3": "1205",
             "sub_account": "02",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -151,8 +176,9 @@
             "level3": "1205",
             "sub_account": "03",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -163,8 +189,9 @@
             "level3": "4102",
             "sub_account": "01",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -175,8 +202,9 @@
             "level3": "4102",
             "sub_account": "02",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -187,8 +215,9 @@
             "level3": "4102",
             "sub_account": "03",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -199,8 +228,9 @@
             "level3": "1102",
             "sub_account": "02",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -211,8 +241,9 @@
             "level3": "4104",
             "sub_account": "01",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -223,8 +254,9 @@
             "level3": "4104",
             "sub_account": "02",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -235,8 +267,9 @@
             "level3": "1103",
             "sub_account": "04",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -247,8 +280,9 @@
             "level3": "2101",
             "sub_account": "01",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": "Limit Amount : 10,000 円"
+            "balance": null,
+            "guideline": "Limit Amount : 10,000 円",
+            "created_by": 1
         }
     },
     {
@@ -259,8 +293,9 @@
             "level3": "4107",
             "sub_account": "01",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": "Duraion: 1 year (2024/4-2025/3)"
+            "balance": null,
+            "guideline": "Duraion: 1 year (2024/4-2025/3)",
+            "created_by": 1
         }
     },
     {
@@ -271,8 +306,9 @@
             "level3": "4108",
             "sub_account": "01",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": "Monthly Amount: 40,000 円"
+            "balance": null,
+            "guideline": "Monthly Amount: 40,000 円",
+            "created_by": 1
         }
     },
     {
@@ -283,8 +319,9 @@
             "level3": "4108",
             "sub_account": "02",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -295,8 +332,9 @@
             "level3": "5101",
             "sub_account": "01",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": "Main Ingredient:\r\n- Veg\r\nCabbage\r\nGreen Cabbage\r\nCarrot\r\nPumpkin\r\nPotato\r\nBean Sprout\r\n\r\n- Cond\r\nOnion\r\nGarlic\r\nChilly\r\n\r\n- Protein\r\nTofu\r\nNutto\r\nEgg\r\nMushroom\r\n\r\n- Carb\r\nBread\r\nUdon\r\nRice"
+            "balance": null,
+            "guideline": "Main Ingredient:\r\n- Veg\r\nCabbage\r\nGreen Cabbage\r\nCarrot\r\nPumpkin\r\nPotato\r\nBean Sprout\r\n\r\n- Cond\r\nOnion\r\nGarlic\r\nChilly\r\n\r\n- Protein\r\nTofu\r\nNutto\r\nEgg\r\nMushroom\r\n\r\n- Carb\r\nBread\r\nUdon\r\nRice",
+            "created_by": 1
         }
     },
     {
@@ -307,8 +345,9 @@
             "level3": "5101",
             "sub_account": "03",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -319,8 +358,9 @@
             "level3": "5101",
             "sub_account": "02",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": "Milk\r\nSoy Milk\r\nPeanut\r\nBakery"
+            "balance": null,
+            "guideline": "Milk\r\nSoy Milk\r\nPeanut\r\nBakery",
+            "created_by": 1
         }
     },
     {
@@ -331,8 +371,9 @@
             "level3": "5102",
             "sub_account": "01",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": "埼京線：十条駅→池袋駅\r\n１ヵ月:　 2,710　¥\r\n３ヵ月:　 7,730　¥\r\n６ヵ月:　14,650　¥"
+            "balance": null,
+            "guideline": "埼京線：十条駅→池袋駅\r\n１ヵ月:　 2,710　¥\r\n３ヵ月:　 7,730　¥\r\n６ヵ月:　14,650　¥",
+            "created_by": 1
         }
     },
     {
@@ -343,8 +384,9 @@
             "level3": "2101",
             "sub_account": "02",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -355,8 +397,9 @@
             "level3": "2101",
             "sub_account": "03",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -367,8 +410,9 @@
             "level3": "2102",
             "sub_account": "01",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -379,8 +423,9 @@
             "level3": "5103",
             "sub_account": "03",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -391,8 +436,9 @@
             "level3": "5102",
             "sub_account": "02",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -403,8 +449,9 @@
             "level3": "5103",
             "sub_account": "02",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -415,8 +462,9 @@
             "level3": "5104",
             "sub_account": "01",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -427,8 +475,9 @@
             "level3": "5105",
             "sub_account": "01",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -439,8 +488,9 @@
             "level3": "5105",
             "sub_account": "02",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -451,8 +501,9 @@
             "level3": "5103",
             "sub_account": "01",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -463,8 +514,9 @@
             "level3": "5106",
             "sub_account": "01",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": "2024/4  : 410,000\r\n2024/10 : 410,000\r\n2025/4  : 460,000\r\n2025/10 : 460,000\r\n2026/4  : 460,000\r\n2026/10 : 460,000"
+            "balance": null,
+            "guideline": "2024/4  : 410,000\r\n2024/10 : 410,000\r\n2025/4  : 460,000\r\n2025/10 : 460,000\r\n2026/4  : 460,000\r\n2026/10 : 460,000",
+            "created_by": 1
         }
     },
     {
@@ -475,8 +527,9 @@
             "level3": "5107",
             "sub_account": "01",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -487,8 +540,9 @@
             "level3": "5109",
             "sub_account": "00",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -499,8 +553,9 @@
             "level3": "5110",
             "sub_account": "01",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
         }
     },
     {
@@ -511,8 +566,100 @@
             "level3": "5109",
             "sub_account": "01",
             "detailed_account": null,
-            "balance_adjustment": null,
-            "guideline": ""
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 45,
+        "fields": {
+            "name": "Preferred Stock",
+            "level3": "3001",
+            "sub_account": "02",
+            "detailed_account": null,
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 46,
+        "fields": {
+            "name": "Additional Paid-in Capital",
+            "level3": "3001",
+            "sub_account": "03",
+            "detailed_account": null,
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 47,
+        "fields": {
+            "name": "Retained Earning",
+            "level3": "3001",
+            "sub_account": "04",
+            "detailed_account": null,
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 48,
+        "fields": {
+            "name": "Other Comprehensive Income",
+            "level3": "3001",
+            "sub_account": "05",
+            "detailed_account": null,
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 49,
+        "fields": {
+            "name": "Treasury Stock",
+            "level3": "3001",
+            "sub_account": "06",
+            "detailed_account": null,
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 50,
+        "fields": {
+            "name": "Capital Contribution",
+            "level3": "3002",
+            "sub_account": "01",
+            "detailed_account": null,
+            "balance": null,
+            "guideline": "",
+            "created_by": 1
+        }
+    },
+    {
+        "model": "acc_codes.account",
+        "pk": 51,
+        "fields": {
+            "name": "Capital Withdrawal",
+            "level3": "3002",
+            "sub_account": "02",
+            "detailed_account": null,
+            "balance": 1,
+            "guideline": "",
+            "created_by": 1
         }
     }
 ]
