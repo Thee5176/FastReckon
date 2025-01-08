@@ -4,8 +4,9 @@ from django.db.models import Max
 from django.urls import reverse
 from django.utils.text import slugify
 
-from acc_codes.models import Account, AccountLevel3
 from acc_books.models import Book
+from acc_codes.models import Account, AccountLevel3
+
     
 class Transaction(models.Model):
     SHOPNAME = {
@@ -25,9 +26,9 @@ class Transaction(models.Model):
     has_receipt = models.BooleanField(default=False)
     shop = models.IntegerField(choices=SHOPNAME, null=True, blank=True)
     #Meta
-    recorder = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    created_by = models.ForeignKey(settings.AUTH_USER_MODEL, related_name=("transactions"), on_delete=models.CASCADE)
+    created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)
     
     class Meta:
         verbose_name = ("Transaction")

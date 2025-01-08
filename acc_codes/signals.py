@@ -1,3 +1,4 @@
+from django.contrib.auth import get_user_model
 from django.db.models.signals import post_migrate
 from django.dispatch import receiver
 from .models import Account, AccountLevel1, AccountLevel2, AccountLevel3
@@ -146,13 +147,15 @@ class AccountPopulator:
             level3_code = c[:4]
             try:
                 level3_instance = AccountLevel3.objects.get(code=level3_code)
+                customuser_instance = get_user_model().objects.get(id=1)
                 
                 Account.objects.get_or_create(
                     name=n,
                     level3=level3_instance,
                     sub_account=c[-2:],
-                    balance_adjustment=b,
+                    balance=b,
                     guideline=g,
+                    created_by=customuser_instance
                 )
             except AccountLevel3.DoesNotExist:
                 print(f"AccountLevel3 with code '{level3_code}' does not exist.")

@@ -20,11 +20,11 @@ class AccountLevel2(models.Model):
         (1, "Dr"),
         (2, "Cr"),
     ]
+    level1 = models.ForeignKey(AccountLevel1, related_name="level2", on_delete=models.CASCADE)
     code = models.CharField(max_length=2, unique=True)
     name = models.CharField(max_length=50)
     guideline = models.TextField(null=True, blank=True)
     balance = models.IntegerField(choices=BALANCE_TYPE)
-    level1 = models.ForeignKey(AccountLevel1, related_name="level2_accounts", on_delete=models.CASCADE)
 
     class Meta:
         ordering = ["code"]
@@ -39,11 +39,11 @@ class AccountLevel3(models.Model):
         (1, "Dr"),
         (2, "Cr"),
     ]
+    level2 = models.ForeignKey(AccountLevel2 ,related_name="level3", on_delete=models.CASCADE)
     code = models.CharField(max_length=4, unique=True, primary_key=True)
     name = models.CharField(max_length=50)
     guideline = models.TextField(null=True, blank=True)
     balance = models.IntegerField(choices=BALANCE_TYPE)
-    level2 = models.ForeignKey(AccountLevel2 ,related_name="level3_accounts", on_delete=models.CASCADE)
 
     class Meta:
         ordering = ["code"]
@@ -60,13 +60,14 @@ class Account(models.Model):
         (2, "Cr"),
     ]
     
-    name = models.CharField(max_length=50)
     level3 = models.ForeignKey(AccountLevel3, related_name="accounts", on_delete=models.CASCADE)
+    name = models.CharField(max_length=50)
     sub_account = models.CharField(max_length=2)
     detailed_account = models.CharField(max_length=2, null=True, blank=True)
-    balance_adjustment = models.IntegerField(choices=BALANCE_TYPE, null=True, blank=True)
+    balance = models.IntegerField(choices=BALANCE_TYPE, null=True, blank=True)
     guideline = models.TextField(null=True, blank=True)
-    created_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True)
+    #Meta
+    created_by = models.ForeignKey(settings.AUTH_USER_MODEL, related_name=("accounts"), on_delete=models.CASCADE)
     
     class Meta:
         ordering = ["level3","sub_account","detailed_account"]
@@ -84,9 +85,8 @@ class Account(models.Model):
     def record_count(self):
         return self.entries.all().count
 
-    @property
-    def balance(self):
-        account_type = self.balance_adjustment if self.balance_adjustment else self.level3.balance
+    def get_balance(self):
+        account_type = self.balance if self.balance else self.level3.balance
         balance = 0
         for entry in self.entries.all():
             if entry.entry_type == account_type:

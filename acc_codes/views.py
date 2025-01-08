@@ -5,13 +5,13 @@ from django.views.generic import ListView, DetailView
 from django.views.generic.edit import  CreateView, UpdateView, DeleteView
 
 from .models import Account, AccountLevel1, AccountLevel2, AccountLevel3
-from .mixins import AccountColorCodeMixin
+from .mixins import AccountColorCodeMixin, UserOwnedQuerysetMixin
 
-class AccountListView(AccountColorCodeMixin, ListView):
+class AccountListView(AccountColorCodeMixin, UserOwnedQuerysetMixin, ListView):
     model = Account
-    template_name = "acc_codes/account_list.html"    
+    template_name = "acc_codes/account_list.html"      
 
-class AccountDetailView(LoginRequiredMixin, AccountColorCodeMixin, DetailView):
+class AccountDetailView(LoginRequiredMixin, AccountColorCodeMixin, UserOwnedQuerysetMixin, DetailView):
     model = Account
     template_name = "acc_codes/account_detail.html"
     

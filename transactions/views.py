@@ -8,14 +8,15 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormMi
 from .forms import TransactionForm, EntryFormSet, EntryFormSet_update
 from .mixins import TransactionFormValidator
 from .models import Transaction, Entry
+from acc_codes.mixins import UserOwnedQuerysetMixin
 
-class GetListView(LoginRequiredMixin, ListView):
+class GetListView(LoginRequiredMixin, UserOwnedQuerysetMixin, ListView):
     model = Transaction
-    template_name = "journals/transaction_list.html"
+    template_name = "transactions/transaction_list.html"
     
-class PostListView(LoginRequiredMixin, FormMixin, ListView):
+class PostListView(LoginRequiredMixin, UserOwnedQuerysetMixin, FormMixin, ListView):
     model = Transaction
-    template_name = "journals/search_results.html"
+    template_name = "transactions/search_results.html"
     
     def get_queryset(self):
         query = self.request.POST.get("keyword")
@@ -47,9 +48,9 @@ class TransactionListView(LoginRequiredMixin, View):
         view = PostListView.as_view()
         return view(request, *args, **kwargs)
 
-class TransactionDetailView(LoginRequiredMixin, DetailView):
+class TransactionDetailView(LoginRequiredMixin, UserOwnedQuerysetMixin, DetailView):
     model = Transaction
-    template_name = "journals/transaction_detail.html"
+    template_name = "transactions/transaction_detail.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -60,7 +61,7 @@ class TransactionDetailView(LoginRequiredMixin, DetailView):
 class TransactionCreateView(LoginRequiredMixin, TransactionFormValidator, FormView):
     form_class = TransactionForm        
     success_url = reverse_lazy("transaction_list")    
-    template_name = "journals/transaction_alter_form.html"
+    template_name = "transactions/transaction_alter_form.html"
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -71,7 +72,7 @@ class TransactionCreateView(LoginRequiredMixin, TransactionFormValidator, FormVi
 class TransactionUpdateView(LoginRequiredMixin, UserPassesTestMixin, TransactionFormValidator, UpdateView):
     model = Transaction
     form_class = TransactionForm
-    template_name = "journals/transaction_alter_form.html"
+    template_name = "transactions/transaction_alter_form.html"
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -85,7 +86,11 @@ class TransactionUpdateView(LoginRequiredMixin, UserPassesTestMixin, Transaction
         return obj.recorder == self.request.user
     
 
-class TransactionDeleteView(LoginRequiredMixin, DeleteView):
+class TransactionDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Transaction
-    template_name = "journals/transaction_delete.html"
+    template_name = "transactions/transaction_delete.html"
     success_url = reverse_lazy("transaction_list")
+    
+    def test_func(self):
+        obj = self.get_object()
+        return obj.recorder == self.request.user

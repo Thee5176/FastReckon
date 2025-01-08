@@ -1,3 +1,4 @@
+from django.contrib.auth import get_user_model
 from django.db.models.signals import post_migrate
 from django.dispatch import receiver
 from .models import Book
@@ -9,4 +10,11 @@ def populate_Book(sender, **kwargs):
         ("JA","Japanese Account",""),
     ]
     for (a,n) in MyBook:
-        Book.objects.get_or_create(abbr=a,name=n,guideline=g)
+        customuser_instance = get_user_model().objects.get(id=1)
+        
+        Book.objects.get_or_create(
+            abbr=a,
+            name=n,
+            guideline=g,
+            created_by=customuser_instance
+        )
