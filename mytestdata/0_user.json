@@ -20,27 +20,5 @@
             "groups": [],
             "user_permissions": []
         }
-    },
-    {
-        "model": "accounts.customuser",
-        "pk": 2,
-        "fields": {
-            "password": "pbkdf2_sha256$870000$ceBoH0bssIPjtBvDWhJ7Bd$8+LqQWEECV2tEzS1qu476vXi+z47yJzGpxmKv1CmUOU=",
-            "last_login": "2025-01-08T08:43:06.420Z",
-            "is_superuser": false,
-            "username": "test",
-            "first_name": "",
-            "last_name": "",
-            "email": "test@example.com",
-            "is_staff": false,
-            "is_active": true,
-            "date_joined": "2025-01-08T08:23:56.147Z",
-            "gender": null,
-            "occupancy": null,
-            "city": null,
-            "annual_income": null,
-            "groups": [],
-            "user_permissions": []
-        }
     }
 ]

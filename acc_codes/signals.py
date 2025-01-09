@@ -1,17 +1,19 @@
 from django.contrib.auth import get_user_model
-from django.db.models.signals import post_migrate
+from django.db.models.signals import post_save
 from django.dispatch import receiver
 from .models import Account, AccountLevel1, AccountLevel2, AccountLevel3
 
+User = get_user_model()
+
 class AccountPopulator:
     @staticmethod
-    @receiver(post_migrate)
-    def handle_post_migrate(sender,**kwargs):
-        if sender.name == "acc_codes":
+    @receiver(post_save, sender=User)
+    def handle_post_migrate(sender, created, instance,**kwargs):
+        if created:
             AccountPopulator.populate_AccountLevel1()
             AccountPopulator.populate_AccountLevel2()
             AccountPopulator.populate_AccountLevel3()
-            AccountPopulator.populate_EquityAccount()
+            AccountPopulator.populate_EquityAccount(instance)
 
     @staticmethod
     def populate_AccountLevel1():
@@ -132,7 +134,7 @@ class AccountPopulator:
                 print(f"AccountLevel2 with code '{level2_code}' does not exist.")
 
     @staticmethod
-    def populate_EquityAccount():
+    def populate_EquityAccount(user_instance):
         EquityAccount = [
             ("300101", "Common Stock", None,""),
             ("300102", "Preferred Stock", None,""),
@@ -141,21 +143,20 @@ class AccountPopulator:
             ("300105", "Other Comprehensive Income", None,""),
             ("300106", "Treasury Stock", None,""),
             ("300201", "Capital Contribution", None,""),
-            ("300202", "Capital Withdrawal", 1,""),
+            ("300202", "Capital Withdrawal", None,""),
         ]
         for (c,n,b,g) in EquityAccount:
             level3_code = c[:4]
             try:
                 level3_instance = AccountLevel3.objects.get(code=level3_code)
-                customuser_instance = get_user_model().objects.get(id=1)
-                
+
                 Account.objects.get_or_create(
                     name=n,
                     level3=level3_instance,
                     sub_account=c[-2:],
                     balance=b,
                     guideline=g,
-                    created_by=customuser_instance
+                    created_by=user_instance
                 )
             except AccountLevel3.DoesNotExist:
                 print(f"AccountLevel3 with code '{level3_code}' does not exist.")
