@@ -1,0 +1,9 @@
+code;name;balance;guideline
+110101;Cash in hand;1;
+300201;Capital Contribution;2;
+300202;Capital Withdrawal;1;
+300101;Preferred Stock;2;
+300102;Additional Paid-in Capital;2;
+300103;Retained Earning;2;
+300104;Other Comprehensive Income;2;
+300105;Treasury Stock;2;

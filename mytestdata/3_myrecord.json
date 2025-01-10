@@ -12,7 +12,7 @@
             "shop": 1,
             "created_by": 1,
             "created": "2025-01-03T10:00:09.278Z",
-            "modified": "2025-01-05T09:49:21.951Z"
+            "modified": "2025-01-10T13:24:36.559Z"
         }
     },
     {
@@ -28,7 +28,7 @@
             "shop": 1,
             "created_by": 1,
             "created": "2025-01-04T03:21:39.657Z",
-            "modified": "2025-01-05T09:50:31.771Z"
+            "modified": "2025-01-10T13:25:10.884Z"
         }
     },
     {
@@ -44,7 +44,7 @@
             "shop": null,
             "created_by": 1,
             "created": "2025-01-05T05:06:16.959Z",
-            "modified": "2025-01-05T05:06:16.959Z"
+            "modified": "2025-01-10T13:25:42.522Z"
         }
     },
     {
@@ -60,7 +60,7 @@
             "shop": null,
             "created_by": 1,
             "created": "2025-01-05T05:20:16.482Z",
-            "modified": "2025-01-05T05:20:16.482Z"
+            "modified": "2025-01-10T13:26:01.663Z"
         }
     },
     {
@@ -76,7 +76,7 @@
             "shop": null,
             "created_by": 1,
             "created": "2025-01-05T06:52:06.483Z",
-            "modified": "2025-01-05T08:16:42.025Z"
+            "modified": "2025-01-10T13:26:19.040Z"
         }
     },
     {
@@ -86,13 +86,13 @@
             "book": 2,
             "date": "2025-01-04",
             "intra_month_ref": 6,
-            "description": "Being Cash Transfer to Suica IC",
+            "description": "Being Cash transfer to Suica IC",
             "slug": "ja2501-6",
             "has_receipt": true,
             "shop": null,
             "created_by": 1,
             "created": "2025-01-05T16:00:12.617Z",
-            "modified": "2025-01-05T16:00:12.617Z"
+            "modified": "2025-01-10T13:26:49.094Z"
         }
     },
     {
@@ -101,14 +101,14 @@
         "fields": {
             "book": 2,
             "date": "2025-01-01",
-            "intra_month_ref": 0,
+            "intra_month_ref": 11,
             "description": "Being previous year's balance brought into book",
             "slug": "JA2501-0",
             "has_receipt": false,
             "shop": null,
             "created_by": 1,
             "created": "2025-01-05T16:19:57.821Z",
-            "modified": "2025-01-08T02:06:20.211Z"
+            "modified": "2025-01-10T13:16:47.221Z"
         }
     },
     {
@@ -124,7 +124,7 @@
             "shop": null,
             "created_by": 1,
             "created": "2025-01-07T08:06:39.433Z",
-            "modified": "2025-01-07T08:06:39.433Z"
+            "modified": "2025-01-10T13:27:11.663Z"
         }
     },
     {
@@ -140,7 +140,7 @@
             "shop": 1,
             "created_by": 1,
             "created": "2025-01-07T14:58:05.514Z",
-            "modified": "2025-01-07T14:58:05.514Z"
+            "modified": "2025-01-10T13:27:31.493Z"
         }
     },
     {
@@ -156,7 +156,7 @@
             "shop": null,
             "created_by": 1,
             "created": "2025-01-08T05:09:17.124Z",
-            "modified": "2025-01-08T05:09:17.124Z"
+            "modified": "2025-01-10T13:27:46.585Z"
         }
     },
     {
@@ -164,7 +164,7 @@
         "pk": 1,
         "fields": {
             "transaction": 1,
-            "code": 26,
+            "code": 35,
             "entry_type": 1,
             "amount": "486.00"
         }
@@ -174,7 +174,7 @@
         "pk": 2,
         "fields": {
             "transaction": 1,
-            "code": 7,
+            "code": 14,
             "entry_type": 2,
             "amount": "486.00"
         }
@@ -184,7 +184,7 @@
         "pk": 3,
         "fields": {
             "transaction": 2,
-            "code": 26,
+            "code": 35,
             "entry_type": 1,
             "amount": "939.00"
         }
@@ -194,7 +194,7 @@
         "pk": 4,
         "fields": {
             "transaction": 2,
-            "code": 22,
+            "code": 23,
             "entry_type": 2,
             "amount": "939.00"
         }
@@ -204,7 +204,7 @@
         "pk": 5,
         "fields": {
             "transaction": 3,
-            "code": 34,
+            "code": 39,
             "entry_type": 1,
             "amount": "167.00"
         }
@@ -214,7 +214,7 @@
         "pk": 6,
         "fields": {
             "transaction": 3,
-            "code": 6,
+            "code": 13,
             "entry_type": 2,
             "amount": "167.00"
         }
@@ -224,7 +224,7 @@
         "pk": 7,
         "fields": {
             "transaction": 4,
-            "code": 8,
+            "code": 15,
             "entry_type": 2,
             "amount": "135.00"
         }
@@ -234,7 +234,7 @@
         "pk": 8,
         "fields": {
             "transaction": 4,
-            "code": 28,
+            "code": 36,
             "entry_type": 1,
             "amount": "135.00"
         }
@@ -244,7 +244,7 @@
         "pk": 9,
         "fields": {
             "transaction": 5,
-            "code": 26,
+            "code": 35,
             "entry_type": 1,
             "amount": "1372.00"
         }
@@ -254,7 +254,7 @@
         "pk": 10,
         "fields": {
             "transaction": 5,
-            "code": 22,
+            "code": 23,
             "entry_type": 2,
             "amount": "1372.00"
         }
@@ -264,7 +264,7 @@
         "pk": 11,
         "fields": {
             "transaction": 8,
-            "code": 6,
+            "code": 13,
             "entry_type": 1,
             "amount": "900.00"
         }
@@ -274,7 +274,7 @@
         "pk": 12,
         "fields": {
             "transaction": 8,
-            "code": 2,
+            "code": 1,
             "entry_type": 2,
             "amount": "900.00"
         }
@@ -284,7 +284,7 @@
         "pk": 13,
         "fields": {
             "transaction": 9,
-            "code": 2,
+            "code": 1,
             "entry_type": 1,
             "amount": "7951.00"
         }
@@ -294,7 +294,7 @@
         "pk": 14,
         "fields": {
             "transaction": 9,
-            "code": 18,
+            "code": 9,
             "entry_type": 1,
             "amount": "255456.00"
         }
@@ -304,7 +304,7 @@
         "pk": 15,
         "fields": {
             "transaction": 9,
-            "code": 6,
+            "code": 13,
             "entry_type": 1,
             "amount": "172.00"
         }
@@ -314,7 +314,7 @@
         "pk": 16,
         "fields": {
             "transaction": 9,
-            "code": 7,
+            "code": 14,
             "entry_type": 1,
             "amount": "2064.00"
         }
@@ -324,7 +324,7 @@
         "pk": 17,
         "fields": {
             "transaction": 9,
-            "code": 8,
+            "code": 15,
             "entry_type": 1,
             "amount": "736.00"
         }
@@ -334,7 +334,7 @@
         "pk": 18,
         "fields": {
             "transaction": 9,
-            "code": 9,
+            "code": 17,
             "entry_type": 1,
             "amount": "10558.00"
         }
@@ -344,7 +344,7 @@
         "pk": 19,
         "fields": {
             "transaction": 9,
-            "code": 22,
+            "code": 23,
             "entry_type": 1,
             "amount": "1.00"
         }
@@ -354,7 +354,7 @@
         "pk": 20,
         "fields": {
             "transaction": 9,
-            "code": 50,
+            "code": 2,
             "entry_type": 2,
             "amount": "396845.00"
         }
@@ -364,7 +364,7 @@
         "pk": 21,
         "fields": {
             "transaction": 10,
-            "code": 26,
+            "code": 35,
             "entry_type": 1,
             "amount": "236.00"
         }
@@ -374,7 +374,7 @@
         "pk": 22,
         "fields": {
             "transaction": 10,
-            "code": 8,
+            "code": 15,
             "entry_type": 2,
             "amount": "236.00"
         }
@@ -384,7 +384,7 @@
         "pk": 23,
         "fields": {
             "transaction": 11,
-            "code": 26,
+            "code": 35,
             "entry_type": 1,
             "amount": "693.00"
         }
@@ -394,7 +394,7 @@
         "pk": 24,
         "fields": {
             "transaction": 11,
-            "code": 22,
+            "code": 23,
             "entry_type": 2,
             "amount": "693.00"
         }
@@ -404,7 +404,7 @@
         "pk": 25,
         "fields": {
             "transaction": 9,
-            "code": 12,
+            "code": 20,
             "entry_type": 1,
             "amount": "57200.00"
         }
@@ -414,7 +414,7 @@
         "pk": 26,
         "fields": {
             "transaction": 9,
-            "code": 13,
+            "code": 21,
             "entry_type": 1,
             "amount": "18155.00"
         }
@@ -424,7 +424,7 @@
         "pk": 27,
         "fields": {
             "transaction": 9,
-            "code": 14,
+            "code": 22,
             "entry_type": 1,
             "amount": "17552.00"
         }
@@ -434,7 +434,7 @@
         "pk": 28,
         "fields": {
             "transaction": 12,
-            "code": 26,
+            "code": 35,
             "entry_type": 1,
             "amount": "496.00"
         }
@@ -444,7 +444,7 @@
         "pk": 29,
         "fields": {
             "transaction": 12,
-            "code": 2,
+            "code": 1,
             "entry_type": 2,
             "amount": "496.00"
         }

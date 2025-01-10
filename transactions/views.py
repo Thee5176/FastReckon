@@ -83,7 +83,7 @@ class TransactionUpdateView(LoginRequiredMixin, UserPassesTestMixin, Transaction
     
     def test_func(self):
         obj = self.get_object()
-        return obj.recorder == self.request.user
+        return obj.created_by == self.request.user
     
 
 class TransactionDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
@@ -93,4 +93,4 @@ class TransactionDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView)
     
     def test_func(self):
         obj = self.get_object()
-        return obj.recorder == self.request.user
+        return obj.created_by == self.request.user

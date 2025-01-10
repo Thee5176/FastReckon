@@ -10,7 +10,7 @@ class TransactionAdmin(admin.ModelAdmin):
     fieldsets = (
         (None, {
             "fields": (
-                ["book","date","intra_month_ref","description","shop","slug","recorder"]
+                ["book","date","intra_month_ref","description","shop","slug","created_by"]
             ),
         }),
     )

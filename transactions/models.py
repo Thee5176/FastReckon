@@ -76,7 +76,7 @@ class Transaction(models.Model):
         return reverse("transaction_detail", kwargs={"slug": self.slug})
     
     def __str__(self):
-        return f"{self.book_id}{self.id}"
+        return f"{self.book.abbr}|{self.description}"
     
     
 class Entry(models.Model):
@@ -102,7 +102,7 @@ class Entry(models.Model):
     class Meta:
         verbose_name = ("Entry")
         verbose_name_plural = ("Entries")
-        ordering = ["entry_type"]
+        ordering = ["entry_type","code","amount"]
     
     def __str__(self):
         return f"{self.transaction}-{self.entry_type}"

@@ -3,9 +3,15 @@ from django.db import models
 from django.urls import reverse
 
 class AccountLevel1(models.Model):
+    BALANCE_TYPE = [
+        (1, "Dr"),
+        (2, "Cr"),
+    ]
     code = models.CharField(max_length=1, unique=True)
     name = models.CharField(max_length=50)
     guideline = models.TextField(null=True, blank=True)
+    balance = models.IntegerField(choices=BALANCE_TYPE)
+
     
     class Meta:
         ordering = ["code"]
@@ -61,9 +67,9 @@ class Account(models.Model):
     ]
     
     level3 = models.ForeignKey(AccountLevel3, related_name="accounts", on_delete=models.CASCADE)
-    name = models.CharField(max_length=50)
     sub_account = models.CharField(max_length=2)
     detailed_account = models.CharField(max_length=2, null=True, blank=True)
+    name = models.CharField(max_length=50)
     balance = models.IntegerField(choices=BALANCE_TYPE, null=True, blank=True)
     guideline = models.TextField(null=True, blank=True)
     #Meta

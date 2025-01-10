@@ -1,0 +1,10 @@
+code;name;balance;guideline
+11;Current Asset;1;see Level3 
+12;Fixed Asset;1;coming soon
+21;Current Liability;2;see Level3 
+22;Long-term Liability;2;coming soon
+30;Equity;2;coming soon
+41;Personal Revenue;2;see Level3 
+42;Corporate Revenue;2;coming soon
+51;Personal Expense;1;see Level3 
+52;Corporate Expense;1;coming soon
