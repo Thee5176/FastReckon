@@ -160,6 +160,22 @@
         }
     },
     {
+        "model": "transactions.transaction",
+        "pk": 15,
+        "fields": {
+            "book": 2,
+            "date": "2025-01-10",
+            "intra_month_ref": 12,
+            "description": "Being Snack paid by MerCard",
+            "slug": "ja2501-12",
+            "has_receipt": true,
+            "shop": null,
+            "created_by": 1,
+            "created": "2025-01-11T00:53:42.309Z",
+            "modified": "2025-01-11T00:53:42.309Z"
+        }
+    },
+    {
         "model": "transactions.entry",
         "pk": 1,
         "fields": {
@@ -447,6 +463,26 @@
             "code": 1,
             "entry_type": 2,
             "amount": "496.00"
+        }
+    },
+    {
+        "model": "transactions.entry",
+        "pk": 30,
+        "fields": {
+            "transaction": 15,
+            "code": 36,
+            "entry_type": 1,
+            "amount": "117.00"
+        }
+    },
+    {
+        "model": "transactions.entry",
+        "pk": 31,
+        "fields": {
+            "transaction": 15,
+            "code": 23,
+            "entry_type": 2,
+            "amount": "117.00"
         }
     }
 ]

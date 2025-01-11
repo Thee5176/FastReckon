@@ -28,7 +28,7 @@ class TransactionFormValidator:
                     self.get_context_data(form=form, formset=formset)
                 )
             #Assign User before save transaction
-            transaction.recorder = self.request.user
+            transaction.created_by = self.request.user
             transaction.save()
             
             #Assign transaction before save to entries
