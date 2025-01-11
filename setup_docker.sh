@@ -36,3 +36,12 @@ sudo usermod -aG docker $USER
 newgrp docker
 
 ## to verify setup run: docker run hello-world
+
+
+# OCI instance
+ORACLE_IP="168.138.213.57"
+
+## Docker bash alias
+alias dk='docker-compose'
+alias dkpyman='docker-compose exec web python manage.py'
+alias dkpsql='docker-compose exec db psql -U postgres'
