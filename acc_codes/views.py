@@ -11,6 +11,19 @@ class AccountListView(AccountColorCodeMixin, UserOwnedQuerysetMixin, ListView):
     model = Account
     template_name = "acc_codes/account_list.html"      
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        name = self.request.GET.get("name")
+        code = self.request.GET.get("code")
+        
+        if name:
+            queryset = queryset.filter(name__icontains=name)
+              
+        if code:
+            queryset = queryset.filter(code__startswith=code)
+            
+        return queryset   
+    
 class AccountDetailView(LoginRequiredMixin, AccountColorCodeMixin, UserOwnedQuerysetMixin, DetailView):
     model = Account
     template_name = "acc_codes/account_detail.html"

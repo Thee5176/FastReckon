@@ -69,6 +69,7 @@ class Account(models.Model):
     level3 = models.ForeignKey(AccountLevel3, related_name="accounts", on_delete=models.CASCADE)
     sub_account = models.CharField(max_length=2)
     detailed_account = models.CharField(max_length=2, null=True, blank=True)
+    code = models.CharField(max_length=9, blank=True)
     name = models.CharField(max_length=50)
     balance = models.IntegerField(choices=BALANCE_TYPE, null=True, blank=True)
     guideline = models.TextField(null=True, blank=True)
@@ -80,12 +81,11 @@ class Account(models.Model):
         verbose_name = ("Account")
         verbose_name_plural = ("Accounts")
     
-    @property
-    def code(self):
-        coa = f"{self.level3.code}{self.sub_account}"
+    def save(self,*args, **kwargs):
+        self.code = f"{self.level3.code}{self.sub_account}"
         if self.detailed_account :
-            coa += f"-{self.detailed_account}"
-        return coa
+            self.code += f"-{self.detailed_account}"
+        super(Account, self).save(*args, **kwargs)
     
     @property
     def record_count(self):

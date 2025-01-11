@@ -10,9 +10,9 @@
 </div>
 <hr>
 <div class='container'>
-    <form method="post" action="{% url "transaction_list" %}" class='d-flex my-2'>
-        {% csrf_token %}
-        <input class='form-control me-2' type="text" name="keyword" placeholder='Enter keyword' required>
+    <form method="get" action="{% url "transaction_list" %}" class='d-flex my-2'>
+        <input class='form-control me-2' type="date" name="created" value="{{ request.GET.created|escape }}">
+        <input class='form-control me-2' type="search" name="keyword" value="{{ request.GET.keyword|escape }}"placeholder='Enter keyword'>
         <input class="btn btn-success" type="submit" value="Search">
     </form>
 </div>

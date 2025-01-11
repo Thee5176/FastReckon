@@ -1,7 +1,10 @@
 #!/usr/bin/bash
 
-docker-compose down
-docker volume rm fastreckon_postgres_data
+##For Restart Project
+# docker-compose exec web python manage.py dumpdata --indent 4 > mytestdata/3_myrecord.json
+# docker-compose down
+# docker volume rm fastreckon_postgres_data
+
 docker-compose up -d --build
 docker-compose exec web python manage.py migrate 
 

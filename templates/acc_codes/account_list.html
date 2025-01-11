@@ -7,7 +7,14 @@
         <h2 class="col-8 text-muted">Table of Account</h2>
         <a class="btn btn-success col-4" href="{% url "account_create" %}">+ New Account</a>
     </div>
-    <hr>
+    <div class='container'>
+        <form method="get" action="{% url "account_list" %}" class='d-flex my-2'>
+            <input class='form-control me-2' type="search" name="code" value="{{ request.GET.code|escape }}" placeholder='Enter code'>
+            <input class='form-control me-2' type="search" name="name" value="{{ request.GET.name|escape }}" placeholder='Enter account'>
+            <input class="btn btn-success" type="submit" value="Search">
+        </form>
+    </div>
+    <hr />
     <div
         class="table-responsive-md"
     >
@@ -33,8 +40,8 @@
                         </a>
                     </td>
                     <td>{{ account.name }}</td>
-                    <td>{{ account.record_count }}</td>
-                    <td>{{ account.balance }}</td>
+                    <td></td>
+                    <td>{{ account.get_balance }}</td>
                 </tr>
             </tbody>
             {% empty %}

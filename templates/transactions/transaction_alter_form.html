@@ -16,6 +16,7 @@
         <div class="alert alert-danger" role="alert">{{ error }}</div>
         {% endfor %}
         <table class="table-light">
+            <hr />
             {% for form in entry_formset %} <!--TODO decomponent and style-->
             <div class="form-row">
                 <span class="ms-auto">{{ form | crispy }}</span>
