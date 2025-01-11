@@ -30,7 +30,7 @@ SECRET_KEY = env.str('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DJANGO_DEBUG', default=False)
 
-ALLOWED_HOSTS = env('DJANGO_ALLOWED_HOST', default=['127.0.0.1','localhost']),
+ALLOWED_HOSTS = ['127.0.0.1','localhost','168.138.213.57']
 
 # Application definition
 

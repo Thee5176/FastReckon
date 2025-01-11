@@ -24,13 +24,18 @@ To get started with FastReckon, follow these steps:
    ```bash
    git clone https://github.com/Thee5176/FastReckon.git
    cd FastReckon
-  
-2. **Set Credential Key for Django-allauthsocial**
-  2.1
+   ```
 
+2. **Set Credential Key for Django-allauthsocial**
+
+   ```bash
+    nano .env
+   ```
+
+- 2.1
 - get credential key and create `.env` file
 - variable name `SOCIALACCOUNT_<provider_name>_CLIENT_ID` && `SOCIALACCOUNT_<provider_name>_SECRET`
-  2.2
+- 2.2
 - Django secret key, Debug, Database setting
 
 3. **Run SetUp Script**
@@ -39,6 +44,7 @@ To get started with FastReckon, follow these steps:
    chmod +x run.sh
    ./run.sh
    # fresh start use:run_wo_data.sh
+   ```
 
 ## 📈 Development
 
