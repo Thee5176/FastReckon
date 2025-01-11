@@ -1,488 +1,2771 @@
 [
-    {
-        "model": "transactions.transaction",
-        "pk": 1,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-01",
-            "intra_month_ref": 1,
-            "description": "Being MealPrep paid by FamiPay",
-            "slug": "ja2501-1",
-            "has_receipt": true,
-            "shop": 1,
-            "created_by": 1,
-            "created": "2025-01-03T10:00:09.278Z",
-            "modified": "2025-01-10T13:24:36.559Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 2,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-02",
-            "intra_month_ref": 2,
-            "description": "Being MealPrep paid by MerCard",
-            "slug": "ja2501-2",
-            "has_receipt": true,
-            "shop": 1,
-            "created_by": 1,
-            "created": "2025-01-04T03:21:39.657Z",
-            "modified": "2025-01-10T13:25:10.884Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 3,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-03",
-            "intra_month_ref": 3,
-            "description": "Being Train Ticket paid by Suica IC.",
-            "slug": "ja2501-3",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-05T05:06:16.959Z",
-            "modified": "2025-01-10T13:25:42.522Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 4,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-03",
-            "intra_month_ref": 4,
-            "description": "Being Snacks paid by PayPay",
-            "slug": "ja2501-4",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-05T05:20:16.482Z",
-            "modified": "2025-01-10T13:26:01.663Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 5,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-04",
-            "intra_month_ref": 5,
-            "description": "Being MealPrep paid by MerCard",
-            "slug": "ja2501-5",
-            "has_receipt": true,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-05T06:52:06.483Z",
-            "modified": "2025-01-10T13:26:19.040Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 8,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-04",
-            "intra_month_ref": 6,
-            "description": "Being Cash transfer to Suica IC",
-            "slug": "ja2501-6",
-            "has_receipt": true,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-05T16:00:12.617Z",
-            "modified": "2025-01-10T13:26:49.094Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 9,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-01",
-            "intra_month_ref": 11,
-            "description": "Being previous year's balance brought into book",
-            "slug": "JA2501-0",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-05T16:19:57.821Z",
-            "modified": "2025-01-10T13:16:47.221Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 10,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-06",
-            "intra_month_ref": 7,
-            "description": "Being MealPrep paid by PayPay",
-            "slug": "ja2501-7",
-            "has_receipt": false,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-07T08:06:39.433Z",
-            "modified": "2025-01-10T13:27:11.663Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 11,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-07",
-            "intra_month_ref": 8,
-            "description": "Being MealPrep paid by MerCard",
-            "slug": "ja2501-8",
-            "has_receipt": true,
-            "shop": 1,
-            "created_by": 1,
-            "created": "2025-01-07T14:58:05.514Z",
-            "modified": "2025-01-10T13:27:31.493Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 12,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-08",
-            "intra_month_ref": 10,
-            "description": "Being MealPrep paid by Cash-in-hand",
-            "slug": "ja2501-10",
-            "has_receipt": true,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-08T05:09:17.124Z",
-            "modified": "2025-01-10T13:27:46.585Z"
-        }
-    },
-    {
-        "model": "transactions.transaction",
-        "pk": 15,
-        "fields": {
-            "book": 2,
-            "date": "2025-01-10",
-            "intra_month_ref": 12,
-            "description": "Being Snack paid by MerCard",
-            "slug": "ja2501-12",
-            "has_receipt": true,
-            "shop": null,
-            "created_by": 1,
-            "created": "2025-01-11T00:53:42.309Z",
-            "modified": "2025-01-11T00:53:42.309Z"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 1,
-        "fields": {
-            "transaction": 1,
-            "code": 35,
-            "entry_type": 1,
-            "amount": "486.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 2,
-        "fields": {
-            "transaction": 1,
-            "code": 14,
-            "entry_type": 2,
-            "amount": "486.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 3,
-        "fields": {
-            "transaction": 2,
-            "code": 35,
-            "entry_type": 1,
-            "amount": "939.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 4,
-        "fields": {
-            "transaction": 2,
-            "code": 23,
-            "entry_type": 2,
-            "amount": "939.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 5,
-        "fields": {
-            "transaction": 3,
-            "code": 39,
-            "entry_type": 1,
-            "amount": "167.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 6,
-        "fields": {
-            "transaction": 3,
-            "code": 13,
-            "entry_type": 2,
-            "amount": "167.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 7,
-        "fields": {
-            "transaction": 4,
-            "code": 15,
-            "entry_type": 2,
-            "amount": "135.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 8,
-        "fields": {
-            "transaction": 4,
-            "code": 36,
-            "entry_type": 1,
-            "amount": "135.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 9,
-        "fields": {
-            "transaction": 5,
-            "code": 35,
-            "entry_type": 1,
-            "amount": "1372.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 10,
-        "fields": {
-            "transaction": 5,
-            "code": 23,
-            "entry_type": 2,
-            "amount": "1372.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 11,
-        "fields": {
-            "transaction": 8,
-            "code": 13,
-            "entry_type": 1,
-            "amount": "900.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 12,
-        "fields": {
-            "transaction": 8,
-            "code": 1,
-            "entry_type": 2,
-            "amount": "900.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 13,
-        "fields": {
-            "transaction": 9,
-            "code": 1,
-            "entry_type": 1,
-            "amount": "7951.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 14,
-        "fields": {
-            "transaction": 9,
-            "code": 9,
-            "entry_type": 1,
-            "amount": "255456.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 15,
-        "fields": {
-            "transaction": 9,
-            "code": 13,
-            "entry_type": 1,
-            "amount": "172.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 16,
-        "fields": {
-            "transaction": 9,
-            "code": 14,
-            "entry_type": 1,
-            "amount": "2064.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 17,
-        "fields": {
-            "transaction": 9,
-            "code": 15,
-            "entry_type": 1,
-            "amount": "736.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 18,
-        "fields": {
-            "transaction": 9,
-            "code": 17,
-            "entry_type": 1,
-            "amount": "10558.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 19,
-        "fields": {
-            "transaction": 9,
-            "code": 23,
-            "entry_type": 1,
-            "amount": "1.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 20,
-        "fields": {
-            "transaction": 9,
-            "code": 2,
-            "entry_type": 2,
-            "amount": "396845.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 21,
-        "fields": {
-            "transaction": 10,
-            "code": 35,
-            "entry_type": 1,
-            "amount": "236.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 22,
-        "fields": {
-            "transaction": 10,
-            "code": 15,
-            "entry_type": 2,
-            "amount": "236.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 23,
-        "fields": {
-            "transaction": 11,
-            "code": 35,
-            "entry_type": 1,
-            "amount": "693.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 24,
-        "fields": {
-            "transaction": 11,
-            "code": 23,
-            "entry_type": 2,
-            "amount": "693.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 25,
-        "fields": {
-            "transaction": 9,
-            "code": 20,
-            "entry_type": 1,
-            "amount": "57200.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 26,
-        "fields": {
-            "transaction": 9,
-            "code": 21,
-            "entry_type": 1,
-            "amount": "18155.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 27,
-        "fields": {
-            "transaction": 9,
-            "code": 22,
-            "entry_type": 1,
-            "amount": "17552.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 28,
-        "fields": {
-            "transaction": 12,
-            "code": 35,
-            "entry_type": 1,
-            "amount": "496.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 29,
-        "fields": {
-            "transaction": 12,
-            "code": 1,
-            "entry_type": 2,
-            "amount": "496.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 30,
-        "fields": {
-            "transaction": 15,
-            "code": 36,
-            "entry_type": 1,
-            "amount": "117.00"
-        }
-    },
-    {
-        "model": "transactions.entry",
-        "pk": 31,
-        "fields": {
-            "transaction": 15,
-            "code": 23,
-            "entry_type": 2,
-            "amount": "117.00"
-        }
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
     }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 4,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 4,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 4,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 4,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 5,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 5,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 5,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 5,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add site",
+        "content_type": 6,
+        "codename": "add_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change site",
+        "content_type": 6,
+        "codename": "change_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete site",
+        "content_type": 6,
+        "codename": "delete_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view site",
+        "content_type": 6,
+        "codename": "view_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add email address",
+        "content_type": 7,
+        "codename": "add_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change email address",
+        "content_type": 7,
+        "codename": "change_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete email address",
+        "content_type": 7,
+        "codename": "delete_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view email address",
+        "content_type": 7,
+        "codename": "view_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add email confirmation",
+        "content_type": 8,
+        "codename": "add_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change email confirmation",
+        "content_type": 8,
+        "codename": "change_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete email confirmation",
+        "content_type": 8,
+        "codename": "delete_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view email confirmation",
+        "content_type": 8,
+        "codename": "view_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add social account",
+        "content_type": 9,
+        "codename": "add_socialaccount"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change social account",
+        "content_type": 9,
+        "codename": "change_socialaccount"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete social account",
+        "content_type": 9,
+        "codename": "delete_socialaccount"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view social account",
+        "content_type": 9,
+        "codename": "view_socialaccount"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add social application",
+        "content_type": 10,
+        "codename": "add_socialapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change social application",
+        "content_type": 10,
+        "codename": "change_socialapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete social application",
+        "content_type": 10,
+        "codename": "delete_socialapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view social application",
+        "content_type": 10,
+        "codename": "view_socialapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add social application token",
+        "content_type": 11,
+        "codename": "add_socialtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change social application token",
+        "content_type": 11,
+        "codename": "change_socialtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete social application token",
+        "content_type": 11,
+        "codename": "delete_socialtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view social application token",
+        "content_type": 11,
+        "codename": "view_socialtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 12,
+        "codename": "add_customuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 12,
+        "codename": "change_customuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 12,
+        "codename": "delete_customuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 12,
+        "codename": "view_customuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add Book",
+        "content_type": 13,
+        "codename": "add_book"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change Book",
+        "content_type": 13,
+        "codename": "change_book"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete Book",
+        "content_type": 13,
+        "codename": "delete_book"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view Book",
+        "content_type": 13,
+        "codename": "view_book"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can add AccountLevel1",
+        "content_type": 14,
+        "codename": "add_accountlevel1"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can change AccountLevel1",
+        "content_type": 14,
+        "codename": "change_accountlevel1"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can delete AccountLevel1",
+        "content_type": 14,
+        "codename": "delete_accountlevel1"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can view AccountLevel1",
+        "content_type": 14,
+        "codename": "view_accountlevel1"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+        "name": "Can add AccountLevel2",
+        "content_type": 15,
+        "codename": "add_accountlevel2"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+        "name": "Can change AccountLevel2",
+        "content_type": 15,
+        "codename": "change_accountlevel2"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+        "name": "Can delete AccountLevel2",
+        "content_type": 15,
+        "codename": "delete_accountlevel2"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+        "name": "Can view AccountLevel2",
+        "content_type": 15,
+        "codename": "view_accountlevel2"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+        "name": "Can add AccountLevel3",
+        "content_type": 16,
+        "codename": "add_accountlevel3"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+        "name": "Can change AccountLevel3",
+        "content_type": 16,
+        "codename": "change_accountlevel3"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+        "name": "Can delete AccountLevel3",
+        "content_type": 16,
+        "codename": "delete_accountlevel3"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+        "name": "Can view AccountLevel3",
+        "content_type": 16,
+        "codename": "view_accountlevel3"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+        "name": "Can add Account",
+        "content_type": 17,
+        "codename": "add_account"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+        "name": "Can change Account",
+        "content_type": 17,
+        "codename": "change_account"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+        "name": "Can delete Account",
+        "content_type": 17,
+        "codename": "delete_account"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+        "name": "Can view Account",
+        "content_type": 17,
+        "codename": "view_account"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+        "name": "Can add Transaction",
+        "content_type": 18,
+        "codename": "add_transaction"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+        "name": "Can change Transaction",
+        "content_type": 18,
+        "codename": "change_transaction"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+        "name": "Can delete Transaction",
+        "content_type": 18,
+        "codename": "delete_transaction"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+        "name": "Can view Transaction",
+        "content_type": 18,
+        "codename": "view_transaction"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+        "name": "Can add Entry",
+        "content_type": 19,
+        "codename": "add_entry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+        "name": "Can change Entry",
+        "content_type": 19,
+        "codename": "change_entry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+        "name": "Can delete Entry",
+        "content_type": 19,
+        "codename": "delete_entry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+        "name": "Can view Entry",
+        "content_type": 19,
+        "codename": "view_entry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "sites",
+        "model": "site"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "account",
+        "model": "emailaddress"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "account",
+        "model": "emailconfirmation"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "socialaccount",
+        "model": "socialaccount"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "socialaccount",
+        "model": "socialapp"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "socialaccount",
+        "model": "socialtoken"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "accounts",
+        "model": "customuser"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+        "app_label": "acc_books",
+        "model": "book"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+        "app_label": "acc_codes",
+        "model": "accountlevel1"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+        "app_label": "acc_codes",
+        "model": "accountlevel2"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+        "app_label": "acc_codes",
+        "model": "accountlevel3"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+        "app_label": "acc_codes",
+        "model": "account"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+        "app_label": "transactions",
+        "model": "transaction"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": {
+        "app_label": "transactions",
+        "model": "entry"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "o7huko6vcdaqwvvofgufih01ou9youmb",
+    "fields": {
+        "session_data": ".eJxVj8tuwyAQRf9l1hYy2DzsZff5gqqyhgFq2hoig9VWUf69Ic0mu9GcO0dzL4BE-Uh1waOuPtVIWGNOy-brml2B-fUC_zPMcMZSvvPuoAOsMHM9KKmM4gOTQk5mkh0cxe8JN39Lo9tigutbB3f50tASm4fD084iffrUgPvA9J4Z5VT3aFmLsAct7JSd_3p5ZJ8EK5b1dh00D9oGcmZwSghpe5p0GJXVRvQ9BpRB-5FIeye5HdAIHE1ArjRaInH_qvhSWn__c477L8z99Q97zWET:1tWSpB:5HSYY5YAd_AJcVT_tC2znSZyKMJOzpJ-dtyfC04mKDg",
+        "expire_date": "2025-01-25T04:10:13.555Z"
+    }
+},
+{
+    "model": "sites.site",
+    "pk": 1,
+    "fields": {
+        "domain": "example.com",
+        "name": "example.com"
+    }
+},
+{
+    "model": "accounts.customuser",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$M4nmwYNl9L8DXy3zSwvK8Z$73G9NaEWml6auJmbSC2vHY7yvjx4XqUdw7KE+ZbyipA=",
+        "last_login": "2025-01-11T04:10:13.546Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin@example.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-12-31T04:57:55.377Z",
+        "gender": null,
+        "occupancy": null,
+        "city": null,
+        "annual_income": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "acc_books.book",
+    "pk": 1,
+    "fields": {
+        "abbr": "TA",
+        "name": "Thai Account",
+        "guideline": "",
+        "currency_sign": "¥",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_books.book",
+    "pk": 2,
+    "fields": {
+        "abbr": "JA",
+        "name": "Japanese Account",
+        "guideline": "",
+        "currency_sign": "฿",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel1",
+    "pk": 1,
+    "fields": {
+        "code": "1",
+        "name": "Asset",
+        "guideline": "nan",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel1",
+    "pk": 2,
+    "fields": {
+        "code": "2",
+        "name": "Liability",
+        "guideline": "nan",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel1",
+    "pk": 3,
+    "fields": {
+        "code": "3",
+        "name": "Equity",
+        "guideline": "nan",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel1",
+    "pk": 4,
+    "fields": {
+        "code": "4",
+        "name": "Revenue",
+        "guideline": "nan",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel1",
+    "pk": 5,
+    "fields": {
+        "code": "5",
+        "name": "Expense",
+        "guideline": "nan",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel1",
+    "pk": 6,
+    "fields": {
+        "code": "6",
+        "name": "Gain",
+        "guideline": "nan",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel1",
+    "pk": 7,
+    "fields": {
+        "code": "7",
+        "name": "Loss",
+        "guideline": "nan",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel2",
+    "pk": 1,
+    "fields": {
+        "level1": 1,
+        "code": "11",
+        "name": "Current Asset",
+        "guideline": "see Level3 ",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel2",
+    "pk": 2,
+    "fields": {
+        "level1": 1,
+        "code": "12",
+        "name": "Fixed Asset",
+        "guideline": "coming soon",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel2",
+    "pk": 3,
+    "fields": {
+        "level1": 2,
+        "code": "21",
+        "name": "Current Liability",
+        "guideline": "see Level3 ",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel2",
+    "pk": 4,
+    "fields": {
+        "level1": 2,
+        "code": "22",
+        "name": "Long-term Liability",
+        "guideline": "coming soon",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel2",
+    "pk": 5,
+    "fields": {
+        "level1": 3,
+        "code": "30",
+        "name": "Equity",
+        "guideline": "coming soon",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel2",
+    "pk": 6,
+    "fields": {
+        "level1": 4,
+        "code": "41",
+        "name": "Personal Revenue",
+        "guideline": "see Level3 ",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel2",
+    "pk": 7,
+    "fields": {
+        "level1": 4,
+        "code": "42",
+        "name": "Corporate Revenue",
+        "guideline": "coming soon",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel2",
+    "pk": 8,
+    "fields": {
+        "level1": 5,
+        "code": "51",
+        "name": "Personal Expense",
+        "guideline": "see Level3 ",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel2",
+    "pk": 9,
+    "fields": {
+        "level1": 5,
+        "code": "52",
+        "name": "Corporate Expense",
+        "guideline": "coming soon",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "1101",
+    "fields": {
+        "level2": 1,
+        "name": "Cash in hand",
+        "guideline": "Reserved for  110101: cash in hand",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "1102",
+    "fields": {
+        "level2": 1,
+        "name": "Bank Account",
+        "guideline": "Code: 11020x-0y x=bank_count, y=account_count\nName : Bank_name Last_4_digits (Your_callable_name)\n - example: 110201 | Kbank 1123 (Salary Account)",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "1103",
+    "fields": {
+        "level2": 1,
+        "name": "E-wallet",
+        "guideline": "Code: 11030xn\nName : Bank_name Last_4_digits (Your_callable_name)\n - example: 110301 | Paypal",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "1104",
+    "fields": {
+        "level2": 1,
+        "name": "Debit Card",
+        "guideline": "Code: 11040x\nName : Card_name Provider\n - example: 110401 | YouTrip Visa",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "1105",
+    "fields": {
+        "level2": 1,
+        "name": "Account Receivable",
+        "guideline": "Code: 11050x\nName : Person_name\n - example: 110501 | Mike\nDescription : credit_limit, agreed_duration, penalty_clause, blacklist_flag",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "1106",
+    "fields": {
+        "level2": 1,
+        "name": "Workplace AW",
+        "guideline": "Code: 11060x\nName : Workplace_name\n - example : 110601 | SuperHotel\nDescription : payment_date, to_account",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "1201",
+    "fields": {
+        "level2": 2,
+        "name": "Inventory",
+        "guideline": "-",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "1202",
+    "fields": {
+        "level2": 2,
+        "name": "Equipment",
+        "guideline": "-",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "1203",
+    "fields": {
+        "level2": 2,
+        "name": "Vehicle",
+        "guideline": "-",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "2101",
+    "fields": {
+        "level2": 3,
+        "name": "Credit Card",
+        "guideline": "Code: 21010x\nName : Card_name Provider\n - example: 210101 | SCB_Platinum JCB",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "2102",
+    "fields": {
+        "level2": 3,
+        "name": "Account Payable",
+        "guideline": "nan",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "2103",
+    "fields": {
+        "level2": 3,
+        "name": "Accrued Expense",
+        "guideline": "nan",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "2104",
+    "fields": {
+        "level2": 3,
+        "name": "Taxed Payable",
+        "guideline": "nan",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "2201",
+    "fields": {
+        "level2": 4,
+        "name": "Long-term Debt",
+        "guideline": "nan",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "3001",
+    "fields": {
+        "level2": 5,
+        "name": "Stock",
+        "guideline": "-",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "3002",
+    "fields": {
+        "level2": 5,
+        "name": "Capital",
+        "guideline": "Reserved for 300201: Contributions and 300202: Withdrawals",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "3003",
+    "fields": {
+        "level2": 5,
+        "name": "Partnership Equity",
+        "guideline": "-",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "3004",
+    "fields": {
+        "level2": 5,
+        "name": "Other Equity",
+        "guideline": "-",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "3005",
+    "fields": {
+        "level2": 5,
+        "name": "Dividend",
+        "guideline": "-",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "4101",
+    "fields": {
+        "level2": 6,
+        "name": "Salary Revenue",
+        "guideline": "-",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "4102",
+    "fields": {
+        "level2": 6,
+        "name": "Wage Revenue",
+        "guideline": "Description(Thai Only): Type 2, 6, 7",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "4103",
+    "fields": {
+        "level2": 6,
+        "name": "Licensing Revenue",
+        "guideline": "-",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "4104",
+    "fields": {
+        "level2": 6,
+        "name": "Investment Revenue",
+        "guideline": "-",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "4105",
+    "fields": {
+        "level2": 6,
+        "name": "Rent Revenue",
+        "guideline": "-",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "4106",
+    "fields": {
+        "level2": 6,
+        "name": "Business Revenue",
+        "guideline": "-",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "4107",
+    "fields": {
+        "level2": 6,
+        "name": "Other Revenue",
+        "guideline": "-",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "4211",
+    "fields": {
+        "level2": 7,
+        "name": "Goods",
+        "guideline": "-",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "4212",
+    "fields": {
+        "level2": 7,
+        "name": "Services",
+        "guideline": "-",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "4213",
+    "fields": {
+        "level2": 7,
+        "name": "Products",
+        "guideline": "-",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "4214",
+    "fields": {
+        "level2": 7,
+        "name": "Subscriptions",
+        "guideline": "-",
+        "balance": 2
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "5101",
+    "fields": {
+        "level2": 8,
+        "name": "Food Expense",
+        "guideline": "-",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "5102",
+    "fields": {
+        "level2": 8,
+        "name": "Transportation Expense",
+        "guideline": "-",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "5103",
+    "fields": {
+        "level2": 8,
+        "name": "Shopping Expense",
+        "guideline": "-",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "5104",
+    "fields": {
+        "level2": 8,
+        "name": "Utilities Bill",
+        "guideline": "-",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "5105",
+    "fields": {
+        "level2": 8,
+        "name": "Health Expense",
+        "guideline": "-",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "5106",
+    "fields": {
+        "level2": 8,
+        "name": "Education Expense",
+        "guideline": "-",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "5107",
+    "fields": {
+        "level2": 8,
+        "name": "Social & Recreation Expense",
+        "guideline": "-",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "5108",
+    "fields": {
+        "level2": 8,
+        "name": "Family Expense",
+        "guideline": "-",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "5109",
+    "fields": {
+        "level2": 8,
+        "name": "Miscellaneous Expense",
+        "guideline": "-",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "5110",
+    "fields": {
+        "level2": 8,
+        "name": "Accommodation Expense",
+        "guideline": "-",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "5201",
+    "fields": {
+        "level2": 9,
+        "name": "Payroll",
+        "guideline": "-",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "5202",
+    "fields": {
+        "level2": 9,
+        "name": "Rent",
+        "guideline": "-",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "5203",
+    "fields": {
+        "level2": 9,
+        "name": "Repair and Maintenance",
+        "guideline": "-",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "5204",
+    "fields": {
+        "level2": 9,
+        "name": "Depreciation",
+        "guideline": "-",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "5205",
+    "fields": {
+        "level2": 9,
+        "name": "Utilities Expense",
+        "guideline": "-",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.accountlevel3",
+    "pk": "5206",
+    "fields": {
+        "level2": 9,
+        "name": "Cost of Sales",
+        "guideline": "-",
+        "balance": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 1,
+    "fields": {
+        "level3": "1101",
+        "sub_account": "01",
+        "detailed_account": null,
+        "name": "Cash in hand",
+        "balance": 1,
+        "guideline": "nan",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 2,
+    "fields": {
+        "level3": "3002",
+        "sub_account": "01",
+        "detailed_account": null,
+        "name": "Capital Contribution",
+        "balance": 2,
+        "guideline": "nan",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 3,
+    "fields": {
+        "level3": "3002",
+        "sub_account": "02",
+        "detailed_account": null,
+        "name": "Capital Withdrawal",
+        "balance": 1,
+        "guideline": "nan",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 4,
+    "fields": {
+        "level3": "3001",
+        "sub_account": "01",
+        "detailed_account": null,
+        "name": "Preferred Stock",
+        "balance": 2,
+        "guideline": "nan",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 5,
+    "fields": {
+        "level3": "3001",
+        "sub_account": "02",
+        "detailed_account": null,
+        "name": "Additional Paid-in Capital",
+        "balance": 2,
+        "guideline": "nan",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 6,
+    "fields": {
+        "level3": "3001",
+        "sub_account": "03",
+        "detailed_account": null,
+        "name": "Retained Earning",
+        "balance": 2,
+        "guideline": "nan",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 7,
+    "fields": {
+        "level3": "3001",
+        "sub_account": "04",
+        "detailed_account": null,
+        "name": "Other Comprehensive Income",
+        "balance": 2,
+        "guideline": "nan",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 8,
+    "fields": {
+        "level3": "3001",
+        "sub_account": "05",
+        "detailed_account": null,
+        "name": "Treasury Stock",
+        "balance": 2,
+        "guideline": "nan",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 9,
+    "fields": {
+        "level3": "1102",
+        "sub_account": "02",
+        "detailed_account": null,
+        "name": "ゆうちょ 1861",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 10,
+    "fields": {
+        "level3": "1102",
+        "sub_account": "01",
+        "detailed_account": "01",
+        "name": "KBank 0333 (J-checking)",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 11,
+    "fields": {
+        "level3": "1102",
+        "sub_account": "01",
+        "detailed_account": "02",
+        "name": "KBank 2911 (T-checking)",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 12,
+    "fields": {
+        "level3": "1102",
+        "sub_account": "01",
+        "detailed_account": "03",
+        "name": "KBank 8119 (Room 723)",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 13,
+    "fields": {
+        "level3": "1103",
+        "sub_account": "01",
+        "detailed_account": null,
+        "name": "Suica IC",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 14,
+    "fields": {
+        "level3": "1103",
+        "sub_account": "02",
+        "detailed_account": null,
+        "name": "FamiPay",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 15,
+    "fields": {
+        "level3": "1103",
+        "sub_account": "03",
+        "detailed_account": null,
+        "name": "PayPay",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 16,
+    "fields": {
+        "level3": "1103",
+        "sub_account": "04",
+        "detailed_account": null,
+        "name": "MerPay",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 17,
+    "fields": {
+        "level3": "1104",
+        "sub_account": "01",
+        "detailed_account": null,
+        "name": "YouTrip",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 18,
+    "fields": {
+        "level3": "1104",
+        "sub_account": "02",
+        "detailed_account": null,
+        "name": "Boarding Card",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 19,
+    "fields": {
+        "level3": "1105",
+        "sub_account": "01",
+        "detailed_account": null,
+        "name": "Dad AR",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 20,
+    "fields": {
+        "level3": "1106",
+        "sub_account": "01",
+        "detailed_account": null,
+        "name": "SuperHotel AW",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 21,
+    "fields": {
+        "level3": "1106",
+        "sub_account": "02",
+        "detailed_account": null,
+        "name": "En AW",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 22,
+    "fields": {
+        "level3": "1106",
+        "sub_account": "03",
+        "detailed_account": null,
+        "name": "Katsuya AW",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 23,
+    "fields": {
+        "level3": "2101",
+        "sub_account": "01",
+        "detailed_account": null,
+        "name": "MerCard",
+        "balance": null,
+        "guideline": "Limit Amount : 10,000 円",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 24,
+    "fields": {
+        "level3": "2101",
+        "sub_account": "02",
+        "detailed_account": null,
+        "name": "Kbank The Passion VISA",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 25,
+    "fields": {
+        "level3": "2101",
+        "sub_account": "03",
+        "detailed_account": null,
+        "name": "SCB JCB Platinum",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 26,
+    "fields": {
+        "level3": "2102",
+        "sub_account": "01",
+        "detailed_account": null,
+        "name": "Mom AP",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 27,
+    "fields": {
+        "level3": "4102",
+        "sub_account": "01",
+        "detailed_account": null,
+        "name": "SuperHotel Wage",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 28,
+    "fields": {
+        "level3": "4102",
+        "sub_account": "02",
+        "detailed_account": null,
+        "name": "En Wage",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 29,
+    "fields": {
+        "level3": "4102",
+        "sub_account": "03",
+        "detailed_account": null,
+        "name": "Katsuya Wage",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 30,
+    "fields": {
+        "level3": "4104",
+        "sub_account": "01",
+        "detailed_account": null,
+        "name": "KBank Deposit Interest",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 31,
+    "fields": {
+        "level3": "4104",
+        "sub_account": "02",
+        "detailed_account": null,
+        "name": "ゆうちょ Deposit Interest",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 32,
+    "fields": {
+        "level3": "4107",
+        "sub_account": "01",
+        "detailed_account": null,
+        "name": "JASSO Scholarship",
+        "balance": null,
+        "guideline": "Duraion: 1 year (2024/4-2025/3)",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 33,
+    "fields": {
+        "level3": "4107",
+        "sub_account": "01",
+        "detailed_account": null,
+        "name": "Allowance from Dad",
+        "balance": null,
+        "guideline": "Monthly Amount: 40,000 円",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 34,
+    "fields": {
+        "level3": "4107",
+        "sub_account": "02",
+        "detailed_account": null,
+        "name": "Allowance from Mom",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 35,
+    "fields": {
+        "level3": "5101",
+        "sub_account": "01",
+        "detailed_account": null,
+        "name": "MealPrep",
+        "balance": null,
+        "guideline": "Main Ingredient:\r\n- Veg\r\nCabbage\r\nGreen Cabbage\r\nCarrot\r\nPumpkin\r\nPotato\r\nBean Sprout\r\n\r\n- Cond\r\nOnion\r\nGarlic\r\nChilly\r\n\r\n- Protein\r\nTofu\r\nNutto\r\nEgg\r\nMushroom\r\n\r\n- Carb\r\nBread\r\nUdon\r\nRice",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 36,
+    "fields": {
+        "level3": "5101",
+        "sub_account": "02",
+        "detailed_account": null,
+        "name": "Snack",
+        "balance": null,
+        "guideline": "Milk\r\nSoy Milk\r\nPeanut\r\nBakery",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 37,
+    "fields": {
+        "level3": "5101",
+        "sub_account": "03",
+        "detailed_account": null,
+        "name": "Eat-out",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 38,
+    "fields": {
+        "level3": "5102",
+        "sub_account": "01",
+        "detailed_account": null,
+        "name": "Commuter Pass",
+        "balance": null,
+        "guideline": "埼京線：十条駅→池袋駅\r\n１ヵ月:　 2,710　¥\r\n３ヵ月:　 7,730　¥\r\n６ヵ月:　14,650　¥",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 39,
+    "fields": {
+        "level3": "5102",
+        "sub_account": "02",
+        "detailed_account": null,
+        "name": "Non-Commuter Pass",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 40,
+    "fields": {
+        "level3": "5103",
+        "sub_account": "01",
+        "detailed_account": null,
+        "name": "Glocery",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 41,
+    "fields": {
+        "level3": "5103",
+        "sub_account": "02",
+        "detailed_account": null,
+        "name": "Appliances and Gadgets",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 42,
+    "fields": {
+        "level3": "5103",
+        "sub_account": "03",
+        "detailed_account": null,
+        "name": "Clothing",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 43,
+    "fields": {
+        "level3": "5104",
+        "sub_account": "01",
+        "detailed_account": null,
+        "name": "STEP CLOUD Utilities",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 44,
+    "fields": {
+        "level3": "5105",
+        "sub_account": "01",
+        "detailed_account": null,
+        "name": "National Health Insurance",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 45,
+    "fields": {
+        "level3": "5105",
+        "sub_account": "02",
+        "detailed_account": null,
+        "name": "Medical Bills",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 46,
+    "fields": {
+        "level3": "5106",
+        "sub_account": "01",
+        "detailed_account": null,
+        "name": "TIU Tuition Fee",
+        "balance": null,
+        "guideline": "2024/4  : 410,000\r\n2024/10 : 410,000\r\n2025/4  : 460,000\r\n2025/10 : 460,000\r\n2026/4  : 460,000\r\n2026/10 : 460,000",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 47,
+    "fields": {
+        "level3": "5107",
+        "sub_account": "01",
+        "detailed_account": null,
+        "name": "Meal Treat",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 48,
+    "fields": {
+        "level3": "5109",
+        "sub_account": "00",
+        "detailed_account": null,
+        "name": "Other Expenses",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 49,
+    "fields": {
+        "level3": "5109",
+        "sub_account": "01",
+        "detailed_account": null,
+        "name": "Services Fee",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "acc_codes.account",
+    "pk": 50,
+    "fields": {
+        "level3": "5110",
+        "sub_account": "01",
+        "detailed_account": null,
+        "name": "STEP CLOUD Rent",
+        "balance": null,
+        "guideline": "",
+        "created_by": 1
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 1,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-01",
+        "intra_month_ref": 1,
+        "description": "Being MealPrep paid by FamiPay",
+        "slug": "ja2501-1",
+        "has_receipt": true,
+        "shop": 1,
+        "created_by": 1,
+        "created": "2025-01-03T10:00:09.278Z",
+        "modified": "2025-01-10T13:24:36.559Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 2,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-02",
+        "intra_month_ref": 2,
+        "description": "Being MealPrep paid by MerCard",
+        "slug": "ja2501-2",
+        "has_receipt": true,
+        "shop": 1,
+        "created_by": 1,
+        "created": "2025-01-04T03:21:39.657Z",
+        "modified": "2025-01-10T13:25:10.884Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 3,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-03",
+        "intra_month_ref": 3,
+        "description": "Being Train Ticket paid by Suica IC.",
+        "slug": "ja2501-3",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-05T05:06:16.959Z",
+        "modified": "2025-01-10T13:25:42.522Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 4,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-03",
+        "intra_month_ref": 4,
+        "description": "Being Snacks paid by PayPay",
+        "slug": "ja2501-4",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-05T05:20:16.482Z",
+        "modified": "2025-01-10T13:26:01.663Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 5,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-04",
+        "intra_month_ref": 5,
+        "description": "Being MealPrep paid by MerCard",
+        "slug": "ja2501-5",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-05T06:52:06.483Z",
+        "modified": "2025-01-10T13:26:19.040Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 8,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-04",
+        "intra_month_ref": 6,
+        "description": "Being Cash transfer to Suica IC",
+        "slug": "ja2501-6",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-05T16:00:12.617Z",
+        "modified": "2025-01-10T13:26:49.094Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 9,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-01",
+        "intra_month_ref": 11,
+        "description": "Being previous year's balance brought into book",
+        "slug": "JA2501-0",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-05T16:19:57.821Z",
+        "modified": "2025-01-10T13:16:47.221Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 10,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-06",
+        "intra_month_ref": 7,
+        "description": "Being MealPrep paid by PayPay",
+        "slug": "ja2501-7",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-07T08:06:39.433Z",
+        "modified": "2025-01-10T13:27:11.663Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 11,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-07",
+        "intra_month_ref": 8,
+        "description": "Being MealPrep paid by MerCard",
+        "slug": "ja2501-8",
+        "has_receipt": true,
+        "shop": 1,
+        "created_by": 1,
+        "created": "2025-01-07T14:58:05.514Z",
+        "modified": "2025-01-10T13:27:31.493Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 12,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-08",
+        "intra_month_ref": 10,
+        "description": "Being MealPrep paid by Cash-in-hand",
+        "slug": "ja2501-10",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-08T05:09:17.124Z",
+        "modified": "2025-01-10T13:27:46.585Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 15,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-10",
+        "intra_month_ref": 12,
+        "description": "Being Snack paid by MerCard",
+        "slug": "ja2501-12",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-11T00:53:42.309Z",
+        "modified": "2025-01-11T00:53:42.309Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 16,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-10",
+        "intra_month_ref": 13,
+        "description": "Being Service Fee paid by Cash",
+        "slug": "ja2501-13",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-11T04:12:38.515Z",
+        "modified": "2025-01-11T04:12:38.515Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 17,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-10",
+        "intra_month_ref": 14,
+        "description": "Being Service Fee paid by Cash",
+        "slug": "ja2501-14",
+        "has_receipt": false,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-11T04:13:39.589Z",
+        "modified": "2025-01-11T04:13:39.589Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 18,
+    "fields": {
+        "book": 2,
+        "date": "2025-01-11",
+        "intra_month_ref": 15,
+        "description": "Being MealPrep paid by MerCard",
+        "slug": "ja2501-15",
+        "has_receipt": true,
+        "shop": null,
+        "created_by": 1,
+        "created": "2025-01-11T04:14:46.065Z",
+        "modified": "2025-01-11T04:14:46.065Z"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 1,
+    "fields": {
+        "transaction": 1,
+        "code": 35,
+        "entry_type": 1,
+        "amount": "486.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 2,
+    "fields": {
+        "transaction": 1,
+        "code": 14,
+        "entry_type": 2,
+        "amount": "486.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 3,
+    "fields": {
+        "transaction": 2,
+        "code": 35,
+        "entry_type": 1,
+        "amount": "939.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 4,
+    "fields": {
+        "transaction": 2,
+        "code": 23,
+        "entry_type": 2,
+        "amount": "939.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 5,
+    "fields": {
+        "transaction": 3,
+        "code": 39,
+        "entry_type": 1,
+        "amount": "167.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 6,
+    "fields": {
+        "transaction": 3,
+        "code": 13,
+        "entry_type": 2,
+        "amount": "167.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 7,
+    "fields": {
+        "transaction": 4,
+        "code": 15,
+        "entry_type": 2,
+        "amount": "135.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 8,
+    "fields": {
+        "transaction": 4,
+        "code": 36,
+        "entry_type": 1,
+        "amount": "135.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 9,
+    "fields": {
+        "transaction": 5,
+        "code": 35,
+        "entry_type": 1,
+        "amount": "1372.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 10,
+    "fields": {
+        "transaction": 5,
+        "code": 23,
+        "entry_type": 2,
+        "amount": "1372.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 11,
+    "fields": {
+        "transaction": 8,
+        "code": 13,
+        "entry_type": 1,
+        "amount": "900.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 12,
+    "fields": {
+        "transaction": 8,
+        "code": 1,
+        "entry_type": 2,
+        "amount": "900.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 13,
+    "fields": {
+        "transaction": 9,
+        "code": 1,
+        "entry_type": 1,
+        "amount": "7951.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 14,
+    "fields": {
+        "transaction": 9,
+        "code": 9,
+        "entry_type": 1,
+        "amount": "255456.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 15,
+    "fields": {
+        "transaction": 9,
+        "code": 13,
+        "entry_type": 1,
+        "amount": "172.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 16,
+    "fields": {
+        "transaction": 9,
+        "code": 14,
+        "entry_type": 1,
+        "amount": "2064.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 17,
+    "fields": {
+        "transaction": 9,
+        "code": 15,
+        "entry_type": 1,
+        "amount": "736.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 18,
+    "fields": {
+        "transaction": 9,
+        "code": 17,
+        "entry_type": 1,
+        "amount": "10558.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 19,
+    "fields": {
+        "transaction": 9,
+        "code": 23,
+        "entry_type": 1,
+        "amount": "1.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 20,
+    "fields": {
+        "transaction": 9,
+        "code": 2,
+        "entry_type": 2,
+        "amount": "396845.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 21,
+    "fields": {
+        "transaction": 10,
+        "code": 35,
+        "entry_type": 1,
+        "amount": "236.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 22,
+    "fields": {
+        "transaction": 10,
+        "code": 15,
+        "entry_type": 2,
+        "amount": "236.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 23,
+    "fields": {
+        "transaction": 11,
+        "code": 35,
+        "entry_type": 1,
+        "amount": "693.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 24,
+    "fields": {
+        "transaction": 11,
+        "code": 23,
+        "entry_type": 2,
+        "amount": "693.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 25,
+    "fields": {
+        "transaction": 9,
+        "code": 20,
+        "entry_type": 1,
+        "amount": "57200.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 26,
+    "fields": {
+        "transaction": 9,
+        "code": 21,
+        "entry_type": 1,
+        "amount": "18155.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 27,
+    "fields": {
+        "transaction": 9,
+        "code": 22,
+        "entry_type": 1,
+        "amount": "17552.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 28,
+    "fields": {
+        "transaction": 12,
+        "code": 35,
+        "entry_type": 1,
+        "amount": "496.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 29,
+    "fields": {
+        "transaction": 12,
+        "code": 1,
+        "entry_type": 2,
+        "amount": "496.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 30,
+    "fields": {
+        "transaction": 15,
+        "code": 36,
+        "entry_type": 1,
+        "amount": "117.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 31,
+    "fields": {
+        "transaction": 15,
+        "code": 23,
+        "entry_type": 2,
+        "amount": "117.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 32,
+    "fields": {
+        "transaction": 16,
+        "code": 49,
+        "entry_type": 1,
+        "amount": "200.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 33,
+    "fields": {
+        "transaction": 16,
+        "code": 1,
+        "entry_type": 2,
+        "amount": "200.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 34,
+    "fields": {
+        "transaction": 17,
+        "code": 49,
+        "entry_type": 1,
+        "amount": "600.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 35,
+    "fields": {
+        "transaction": 17,
+        "code": 1,
+        "entry_type": 2,
+        "amount": "600.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 36,
+    "fields": {
+        "transaction": 18,
+        "code": 35,
+        "entry_type": 1,
+        "amount": "168.00"
+    }
+},
+{
+    "model": "transactions.entry",
+    "pk": 37,
+    "fields": {
+        "transaction": 18,
+        "code": 23,
+        "entry_type": 2,
+        "amount": "168.00"
+    }
+}
 ]
