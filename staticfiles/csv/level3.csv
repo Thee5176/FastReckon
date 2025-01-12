@@ -1,0 +1,61 @@
+code;name;balance;guideline
+1101;Cash in hand;1;Reserved for  110101: cash in hand
+1102;Bank Account;1;"Code: 11020x-0y x=bank_count, y=account_count
+Name : Bank_name Last_4_digits (Your_callable_name)
+ - example: 110201 | Kbank 1123 (Salary Account)"
+1103;E-wallet;1;"Code: 11030xn
+Name : Bank_name Last_4_digits (Your_callable_name)
+ - example: 110301 | Paypal"
+1104;Debit Card;1;"Code: 11040x
+Name : Card_name Provider
+ - example: 110401 | YouTrip Visa"
+1105;Account Receivable;1;"Code: 11050x
+Name : Person_name
+ - example: 110501 | Mike
+Description : credit_limit, agreed_duration, penalty_clause, blacklist_flag"
+1106;Workplace AW;1;"Code: 11060x
+Name : Workplace_name
+ - example : 110601 | SuperHotel
+Description : payment_date, to_account"
+1201;Inventory;1;-
+1202;Equipment;1;-
+1203;Vehicle;1;-
+2101;Credit Card;2;"Code: 21010x
+Name : Card_name Provider
+ - example: 210101 | SCB_Platinum JCB"
+2102;Account Payable;2;
+2103;Accrued Expense;2;
+2104;Taxed Payable;2;
+2201;Long-term Debt;2;
+3001;Stock;2;-
+3002;Capital;2;Reserved for 300201: Contributions and 300202: Withdrawals
+3003;Partnership Equity;2;-
+3004;Other Equity;2;-
+3005;Dividend;2;-
+4101;Salary Revenue;2;-
+4102;Wage Revenue;2;Description(Thai Only): Type 2, 6, 7
+4103;Licensing Revenue;2;-
+4104;Investment Revenue;2;-
+4105;Rent Revenue;2;-
+4106;Business Revenue;2;-
+4107;Other Revenue;2;-
+4211;Goods;2;-
+4212;Services;2;-
+4213;Products;2;-
+4214;Subscriptions;2;-
+5101;Food Expense;1;-
+5102;Transportation Expense;1;-
+5103;Shopping Expense;1;-
+5104;Utilities Bill;1;-
+5105;Health Expense;1;-
+5106;Education Expense;1;-
+5107;Social & Recreation Expense;1;-
+5108;Family Expense;1;-
+5109;Miscellaneous Expense;1;-
+5110;Accommodation Expense;1;-
+5201;Payroll;1;-
+5202;Rent;1;-
+5203;Repair and Maintenance;1;-
+5204;Depreciation;1;-
+5205;Utilities Expense;1;-
+5206;Cost of Sales;1;-
