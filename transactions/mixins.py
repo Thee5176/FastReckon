@@ -21,7 +21,7 @@ class TransactionFormValidator:
         if formset.is_valid():
             entries = formset.save(commit=False)
             
-            if self.check_balanced(entries) == False:
+            if self.check_balanced() == False:
                 formset.non_form_errors().append("Amount is invalid.")
                 print("Entry fields has invalid value")
                 return self.render_to_response(
@@ -52,8 +52,8 @@ class TransactionFormValidator:
             self.get_context_data(form=form, formset=formset)
         )
     
-    def check_balanced(self, entries):
-        """Check if the list of 'entries' (imported context) are Dr/Cr balanced."""
-        total_debits = sum(entry.amount for entry in entries if entry.entry_type == 1)
-        total_credits = sum(entry.amount for entry in entries if entry.entry_type == 2)
+    def check_balanced(self):
+        """Check if the list of 'entries' (context_name) are Dr/Cr balanced."""
+        total_debits = sum(entry.amount for entry in self.entries if entry.entry_type == 1)
+        total_credits = sum(entry.amount for entry in self.entries if entry.entry_type == 2)
         return total_debits == total_credits

@@ -45,6 +45,25 @@ class Transaction(models.Model):
         #action_kw is determine by combination of account
 
     def save(self, *args, **kwargs):
+        self.new_month_ref()
+        self.update_slug()
+        super().save(*args, **kwargs)
+    
+    def total_amount(self):
+        total = 0
+        for entry in self.entries.all():
+            total += entry.amount
+        return total/2
+    
+    def update_slug(self):        
+        book = self.book.abbr
+        formatted_date = self.date.strftime("%y%m")
+        ref = self.intra_month_ref
+        latest_slug = slugify(f"{book}{formatted_date}-{ref}")
+        if self.slug != latest_slug :
+            self.slug = latest_slug
+            
+    def new_month_ref(self):
         """
         Automatically add intra_month_ref and slug
         """
@@ -57,20 +76,6 @@ class Transaction(models.Model):
                 self.intra_month_ref = latest_ref['max_ref'] + 1
             else:
                 self.intra_month_ref = 1
-            
-        if not self.slug:
-            book = self.book.abbr
-            formatted_date = self.date.strftime("%y%m")
-            ref = self.intra_month_ref
-            self.slug = slugify(f"{book}{formatted_date}-{ref}")
-            
-        super().save(*args, **kwargs)
-    
-    def total_amount(self):
-        total = 0
-        for entry in self.entries.all():
-            total += entry.amount
-        return total/2
     
     def get_absolute_url(self):
         return reverse("transaction_detail", kwargs={"slug": self.slug})

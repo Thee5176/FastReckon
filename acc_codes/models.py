@@ -82,14 +82,17 @@ class Account(models.Model):
         verbose_name_plural = ("Accounts")
     
     def save(self,*args, **kwargs):
-        self.code = f"{self.level3.code}{self.sub_account}"
-        if self.detailed_account :
-            self.code += f"-{self.detailed_account}"
+        self.update_code()
         super(Account, self).save(*args, **kwargs)
     
     @property
     def record_count(self):
         return self.entries.all().count
+
+    def update_code(self):
+        self.code = f"{self.level3.code}{self.sub_account}"
+        if self.detailed_account :
+            self.code += f"-{self.detailed_account}"
 
     def get_balance(self):
         account_type = self.balance if self.balance else self.level3.balance

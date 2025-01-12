@@ -51,7 +51,6 @@ class TransactionCreateView(LoginRequiredMixin, TransactionFormValidator, FormVi
         return context
         
 class TransactionUpdateView(LoginRequiredMixin, UserPassesTestMixin, TransactionFormValidator, UpdateView):
-    model = Transaction
     form_class = TransactionForm
     template_name = "transactions/transaction_alter_form.html"
     

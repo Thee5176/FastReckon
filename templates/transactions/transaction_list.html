@@ -8,7 +8,7 @@
     <h2 class="text-muted col-8">Transaction List</h2>
     <a class="btn btn-success col-4" href="{% url "transaction_create" %}">Add Reckon</a>
 </div>
-<hr>
+<hr />
 <div class='container'>
     <form method="get" action="{% url "transaction_list" %}" class='d-flex my-2'>
         <input class='form-control me-2' type="date" name="created" value="{{ request.GET.created|escape }}">
