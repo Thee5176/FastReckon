@@ -43,11 +43,6 @@ class Transaction(models.Model):
         # self.description = f"Being {dr_account} {action_kw} by {cr_account}."
         #dr/cr_account might be in list
         #action_kw is determine by combination of account
-
-    def save(self, *args, **kwargs):
-        self.new_month_ref()
-        self.update_slug()
-        super().save(*args, **kwargs)
         
     def total_debits(self):
         entries = self.entries.all()
@@ -89,6 +84,11 @@ class Transaction(models.Model):
                 self.intra_month_ref = latest_ref['max_ref'] + 1
             else:
                 self.intra_month_ref = 1
+
+    def save(self, *args, **kwargs):
+        self.new_month_ref()
+        self.update_slug()
+        super().save(*args, **kwargs)
     
     def get_absolute_url(self):
         return reverse("transaction_detail", kwargs={"slug": self.slug})

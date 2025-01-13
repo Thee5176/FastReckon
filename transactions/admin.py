@@ -7,6 +7,7 @@ class EntryInline(admin.StackedInline):
 
 @admin.register(Transaction)
 class TransactionAdmin(admin.ModelAdmin):
+    list_display = ["intra_month_ref", "slug"]
     fieldsets = (
         (None, {
             "fields": (
