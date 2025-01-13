@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     # 'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.github',
-    # 'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.google',
     # 'allauth.socialaccount.providers.line',
     # Third Party
     'crispy_forms',
@@ -155,7 +155,7 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 
 # Whitenoise Staticfiles
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_STORAGE = "whitenoise.storage.ComporessedStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -192,22 +192,30 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # allauth socialaccount
 
 SOCIALACCOUNT_PROVIDERS = {
-    # "facebook": {
-    #     "APP": {
-    #         "client_id": os.getenv("SOCIALACCOUNT_FACEBOOK_CLIENT_ID"),
-    #         "secret": os.getenv("SOCIALACCOUNT_FACEBOOK_SECRET"),
-    #     }
-    # },
     "github": {
         "APP": {
             "client_id": os.getenv("SOCIALACCOUNT_GITHUB_CLIENT_ID"),
             "secret": os.getenv("SOCIALACCOUNT_GITHUB_SECRET"),
         }
     },
-    # "google": {
+    "google": {
+        "APP": {
+            "client_id": os.getenv("SOCIALACCOUNT_GOOGLE_CLIENT_ID"),
+            "secret": os.getenv("SOCIALACCOUNT_GOOGLE_SECRET"),
+            "key": ""
+        },
+        "SCOPE": [
+            "profile",
+            "email",
+        ],
+        "AUTH_PARAMS": {
+            "access_type": "online",
+        }
+    },
+    # "facebook": {
     #     "APP": {
-    #         "client_id": os.getenv("SOCIALACCOUNT_GOOGLE_CLIENT_ID"),
-    #         "secret": os.getenv("SOCIALACCOUNT_GOOGLE_SECRET"),
+    #         "client_id": os.getenv("SOCIALACCOUNT_FACEBOOK_CLIENT_ID"),
+    #         "secret": os.getenv("SOCIALACCOUNT_FACEBOOK_SECRET"),
     #     }
     # },
     # "line": {
