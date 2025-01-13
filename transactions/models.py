@@ -48,6 +48,19 @@ class Transaction(models.Model):
         self.new_month_ref()
         self.update_slug()
         super().save(*args, **kwargs)
+        
+    def total_debits(self):
+        entries = self.entries.all()
+        return sum(entry.amount for entry in entries if entry.entry_type == 1)
+    
+    def total_credits(self):
+        entries = self.entries.all()
+        return sum(entry.amount for entry in entries if entry.entry_type == 2)
+
+    def is_balance(self):
+        """Check if all associated 'entries' are Dr/Cr balanced."""
+        return self.total_debits() == self.total_credits()
+        
     
     def total_amount(self):
         total = 0

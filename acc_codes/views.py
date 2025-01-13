@@ -40,8 +40,8 @@ class AccountDetailView(LoginRequiredMixin, AccountColorCodeMixin, UserOwnedQuer
         obj = self.get_object()
         if obj:
             obj_code = obj.code
-            context["chart_of_account"] = self.get_chart_of_account(obj_code)
             context["account_type"] = self.get_account_type(obj_code)
+            context["chart_of_account"] = self.get_chart_of_account(obj_code)
         return context
     
     

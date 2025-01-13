@@ -1,6 +1,22 @@
 from .forms import TransactionForm, EntryFormSet
 from .models import Transaction
 
+class BalanceValidator:
+    """Check if the list of 'entries' (context_name) are Dr/Cr balanced."""
+    def __init__(self,entries):
+        self.entries = entries
+
+    @property    
+    def total_debits(self):
+        return sum(entry.amount for entry in self.entries if entry.entry_type == 1)
+    
+    @property
+    def total_credits(self):
+        return sum(entry.amount for entry in self.entries if entry.entry_type == 2)
+
+    def check_balance(self):
+        return self.total_debits == self.total_credits
+
 class TransactionFormValidator:
     """
     Form Checklist:
@@ -20,9 +36,13 @@ class TransactionFormValidator:
 
         if formset.is_valid():
             entries = formset.save(commit=False)
+            MyBalance = BalanceValidator(entries)
             
-            if self.check_balanced() == False:
-                formset.non_form_errors().append("Amount is invalid.")
+            print(MyBalance.total_debits)
+            print(MyBalance.total_credits)
+            
+            if not MyBalance.check_balance():
+                formset.non_form_errors().append(f"Amount is invalid. - Dr/Cr Amount :{MyBalance.total_debits}/{MyBalance.total_credits}")
                 print("Entry fields has invalid value")
                 return self.render_to_response(
                     self.get_context_data(form=form, formset=formset)
@@ -51,9 +71,3 @@ class TransactionFormValidator:
         return self.render_to_response(
             self.get_context_data(form=form, formset=formset)
         )
-    
-    def check_balanced(self):
-        """Check if the list of 'entries' (context_name) are Dr/Cr balanced."""
-        total_debits = sum(entry.amount for entry in self.entries if entry.entry_type == 1)
-        total_credits = sum(entry.amount for entry in self.entries if entry.entry_type == 2)
-        return total_debits == total_credits
