@@ -6,6 +6,7 @@ from django.views.generic.edit import  CreateView, UpdateView, DeleteView
 
 from .models import Account, AccountLevel1, AccountLevel2, AccountLevel3
 from .mixins import AccountColorCodeMixin, UserOwnedQuerysetMixin
+from transactions.models import Transaction
 
 class AccountListView(AccountColorCodeMixin, UserOwnedQuerysetMixin, ListView):
     model = Account
@@ -28,20 +29,17 @@ class AccountDetailView(LoginRequiredMixin, AccountColorCodeMixin, UserOwnedQuer
     model = Account
     template_name = "acc_codes/account_detail.html"
     
-    def get_chart_of_account(self, search_code):
-        return AccountLevel1.objects.filter(code=search_code[0])
-    
-    def get_account_type(self, search_code):
-        return AccountLevel2.objects.filter(code=search_code[:2])
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        queryset = queryset.select_related("level3__level2__level1")
+        return queryset    
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         
         obj = self.get_object()
         if obj:
-            obj_code = obj.code
-            context["account_type"] = self.get_account_type(obj_code)
-            context["chart_of_account"] = self.get_chart_of_account(obj_code)
+            context["transaction_list"] = Transaction.objects.filter(entries__code=obj)
         return context
     
     

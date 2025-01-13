@@ -11,38 +11,33 @@
     {% if object %}
     <div class="container my-4">
         <h4>{{ object.code }} &middot; {{ object.name }}</h4>
-        <fieldset class="border p-3">
+        <fieldset class="border rounded p-3">
             <legend>Account Detail:</legend>
             <ul>
                 <li class="d-flex align-items-start">
                     <span class="col-3">Chart of Account: </span>
-                    
-                    <span class="badge bg-{{ object.color_code }}">
-                        {% for coa in chart_of_account %}{{ coa }}{% endfor %}
-                    </span>
-                    
+                    <span class="badge bg-{{ object.color_code }}">{{ object.level3.level2.level1 }}</span>                    
                 </li>
                 <li class="d-flex align-items-start">
                     <span class="col-3">Account Type: </span>
-                    
-                    <span class="badge bg-secondary">
-                        {% for type in account_type %}{{ type }}{% endfor %}
-                    </span>
-                    
+                    <span class="badge bg-secondary">{{ object.level3.level2 }}</span>                  
                 </li>
                 <li class="d-flex align-items-start">
                     <span class="col-3">Group of Account: </span>
                     <span class="badge bg-secondary">{{ object.level3 }}</span>
                 </li>
-                <li class="d-flex align-items-start"><span class="col-4">Transaction Count: </span></li>
-                <li class="d-flex align-items-start"><span class="col-4">Last Recorded: </span></li>
+
             </ul>
         </fieldset>
-        <div class="row justify-content-between my-3">
-            <a class="btn btn-primary col-4" href="{% url "account_update" object.id %}">! Update Account</a>
-            <a class="btn btn-danger col-4" href="{% url "account_delete" object.id %}">- Delete Account</a>
-        </div>
-        
+    </div>
+    <hr />
+    <div class="container border rounded mu-4 p-3">
+        <h3>Last Recorded: </h3>
+        {% include "transactions/the_table.html" %}
+    </div>
+    <div class="container row justify-content-between my-3">
+        <a class="btn btn-primary col-4" href="{% url "account_update" object.id %}">! Update Account</a>
+        <a class="btn btn-danger col-4" href="{% url "account_delete" object.id %}">- Delete Account</a>
     </div>
     {% else %}
     <p>No Object Found</p>
