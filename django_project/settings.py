@@ -48,10 +48,9 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    # 'allauth.socialaccount.providers.facebook',
-    'allauth.socialaccount.providers.github',
     'allauth.socialaccount.providers.google',
-    # 'allauth.socialaccount.providers.line',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.github',
     # Third Party
     'crispy_forms',
     'crispy_bootstrap5',
@@ -180,6 +179,8 @@ ACCOUNT_UNIQUEUSERNAME = True
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 
+SOCIALACCOUNT_AUTO_SIGNUP = True
+
 AUTHENTICATION_BACKEND = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
@@ -192,12 +193,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # allauth socialaccount
 
 SOCIALACCOUNT_PROVIDERS = {
-    "github": {
-        "APP": {
-            "client_id": os.getenv("SOCIALACCOUNT_GITHUB_CLIENT_ID"),
-            "secret": os.getenv("SOCIALACCOUNT_GITHUB_SECRET"),
-        }
-    },
+    
     "google": {
         "APP": {
             "client_id": os.getenv("SOCIALACCOUNT_GOOGLE_CLIENT_ID"),
@@ -210,20 +206,34 @@ SOCIALACCOUNT_PROVIDERS = {
         ],
         "AUTH_PARAMS": {
             "access_type": "online",
+        },
+        'EMAIL_AUTHENTICATION': True
+    },
+    
+    'facebook': {
+        "APP": {
+            "client_id": os.getenv("SOCIALACCOUNT_FACEBOOK_CLIENT_ID"),
+            "secret": os.getenv("SOCIALACCOUNT_FACEBOOK_SECRET"),
+        },
+        'METHOD': 'oauth2',  # Set to 'js_sdk' to use the Facebook connect SDK
+        'SCOPE': ['email', 'public_profile'],
+        'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+        'INIT_PARAMS': {'cookie': True},
+        'FIELDS': [
+            'id',
+            'name',
+            'picture',
+        ],
+        'EXCHANGE_TOKEN': True,
+        'VERIFIED_EMAIL': True,
+    },
+    
+    "github": {
+        "APP": {
+            "client_id": os.getenv("SOCIALACCOUNT_GITHUB_CLIENT_ID"),
+            "secret": os.getenv("SOCIALACCOUNT_GITHUB_SECRET"),
         }
     },
-    # "facebook": {
-    #     "APP": {
-    #         "client_id": os.getenv("SOCIALACCOUNT_FACEBOOK_CLIENT_ID"),
-    #         "secret": os.getenv("SOCIALACCOUNT_FACEBOOK_SECRET"),
-    #     }
-    # },
-    # "line": {
-    #     "APP": {
-    #         "client_id": os.getenv("SOCIALACCOUNT_LINE_CLIENT_ID"),
-    #         "secret": os.getenv("SOCIALACCOUNT_LINE_SECRET"),
-    #     }
-    # },
 }
 
 # django-debug-toolbar
