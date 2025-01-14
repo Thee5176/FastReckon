@@ -1,0 +1,49 @@
+{% load static %}
+<div class="table-responsive-md">
+    <table
+        class="table table-hover table-light align-middle"
+            >
+        <thead class="table-light">
+            <tr>
+                <th>Date</th>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Receipt</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        {% for entry in entry_list %}
+        <tbody class="table-group-divider">
+            <tr
+            class="table-{{ entry.code.color_code }} position-relative"
+            >
+                <td>{{ entry.transaction.date }}</td>    
+                <td>
+                    <a href="{% url "transaction_detail" entry.transaction.slug %}" class="stretched-link text-decoration-none text-uppercase text-dark">
+                        {{ entry.transaction.slug }}
+                    </a>
+                </td>
+                <td>{{ entry.transaction.description }}</td>
+                <td>{% if entry.transaction.has_receipt %}<i class="bi bi-check-circle success"></i>{% else %}<i class="bi bi-dash-circle-dotted"></i>{% endif %}</td>
+                <td class="myamount">{{ entry.get_entry_balance }}</td>
+            </tr>
+        </tbody>
+        {% empty %}
+        <tbody class="table-group-divider">
+            <tr
+            class="table-light"
+            >
+            <td colspan=6 class='text-danger'>No record associate with account</td>
+        </tr>
+        </tbody>
+        {% endfor %}
+        <tfoot>
+            <tr>
+                <td colspan=4>total</td>
+                <td>
+                    <script src="{% static "js/table_amount_footer.js" %}"></script>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>

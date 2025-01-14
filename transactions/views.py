@@ -54,7 +54,8 @@ class TransactionCreateView(LoginRequiredMixin, TransactionFormValidator, FormVi
         context["view_name"] = "Create"
         return context
         
-class TransactionUpdateView(LoginRequiredMixin, UserPassesTestMixin, TransactionFormValidator, FormView):
+class TransactionUpdateView(LoginRequiredMixin, UserPassesTestMixin, TransactionFormValidator, UpdateView):
+    model = Transaction
     form_class = TransactionForm
     success_url = reverse_lazy("transaction_list")    
     template_name = "transactions/transaction_alter_form.html"

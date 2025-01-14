@@ -6,7 +6,7 @@ from django.views.generic.edit import  CreateView, UpdateView, DeleteView
 
 from .models import Account, AccountLevel1, AccountLevel2, AccountLevel3
 from .mixins import AccountColorCodeMixin, UserOwnedQuerysetMixin
-from transactions.models import Transaction
+from transactions.models import Entry
 
 class AccountListView(AccountColorCodeMixin, UserOwnedQuerysetMixin, ListView):
     model = Account
@@ -39,7 +39,7 @@ class AccountDetailView(LoginRequiredMixin, AccountColorCodeMixin, UserOwnedQuer
         
         obj = self.get_object()
         if obj:
-            context["transaction_list"] = Transaction.objects.filter(entries__code=obj)
+            context["entry_list"] = Entry.objects.select_related('transaction').filter(code=obj.id)
         return context
     
     

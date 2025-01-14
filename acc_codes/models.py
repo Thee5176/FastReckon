@@ -81,6 +81,11 @@ class Account(models.Model):
         verbose_name = ("Account")
         verbose_name_plural = ("Accounts")
     
+    def update_code(self):
+        self.code = f"{self.level3.code}{self.sub_account}"
+        if self.detailed_account :
+            self.code += f"-{self.detailed_account}"
+            
     def save(self,*args, **kwargs):
         self.update_code()
         super(Account, self).save(*args, **kwargs)
@@ -89,20 +94,17 @@ class Account(models.Model):
     def record_count(self):
         return self.entries.all().count
 
-    def update_code(self):
-        self.code = f"{self.level3.code}{self.sub_account}"
-        if self.detailed_account :
-            self.code += f"-{self.detailed_account}"
-
-    def get_balance(self):
-        account_type = self.balance if self.balance else self.level3.balance
+    def get_account_type(self):
+        return self.balance if self.balance else self.level3.balance
+    
+    def get_account_balance(self):
         balance = 0
         for entry in self.entries.all():
-            if entry.entry_type == account_type:
+            if entry.entry_type == self.get_account_type():
                 balance += entry.amount
             else:
                 balance -= entry.amount
-        return f"{balance}" #TODO how to separate entry for each books? entry->transaction->book
+        return balance
     
     def __str__(self):
         return f"{self.code} | {self.name}"

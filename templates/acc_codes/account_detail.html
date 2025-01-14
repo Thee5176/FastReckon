@@ -26,14 +26,13 @@
                     <span class="col-3">Group of Account: </span>
                     <span class="badge bg-secondary">{{ object.level3 }}</span>
                 </li>
-
             </ul>
         </fieldset>
     </div>
     <hr />
     <div class="container border rounded mu-4 p-3">
         <h3>Last Recorded: </h3>
-        {% include "transactions/the_table.html" %}
+        {% include "acc_codes/table.html"%}
     </div>
     <div class="container row justify-content-between my-3">
         <a class="btn btn-primary col-4" href="{% url "account_update" object.id %}">! Update Account</a>

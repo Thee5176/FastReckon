@@ -56,14 +56,16 @@ class Transaction(models.Model):
         """Check if all associated 'entries' are Dr/Cr balanced."""
         return self.total_debits() == self.total_credits()
         
-    
     def total_amount(self):
         total = 0
-        for entry in self.entries.all():
+        for entry in self.entries.all():          
             total += entry.amount
         return total/2
-    
-    def update_slug(self):        
+            
+    def update_slug(self):
+        """
+        update slug by concatenate created(year/month) with intra_month_ref(integer)
+        """    
         book = self.book.abbr
         formatted_date = self.date.strftime("%y%m")
         ref = self.intra_month_ref
@@ -121,6 +123,12 @@ class Entry(models.Model):
         verbose_name = ("Entry")
         verbose_name_plural = ("Entries")
         ordering = ["entry_type","code","amount"]
+    
+    def get_entry_balance(self):
+        if self.entry_type == self.code.get_account_type():
+            return self.amount 
+        else:
+            return self.amount * -1
     
     def __str__(self):
         return f"{self.transaction}-{self.entry_type}"
